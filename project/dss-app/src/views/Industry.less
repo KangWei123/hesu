@@ -1,0 +1,347 @@
+
+// .start-up-industry {
+//   margin: 35px auto;
+//   font-family: PingFangSC-Regular;
+
+//   .title {
+//     height: 20px;
+//     font-size: 14px;
+//     font-weight: 400;
+//     color: rgba(44, 54, 65, 1);
+//     line-height: 20px;
+//     text-align: center;
+//     margin-bottom: 22px;
+//   }
+
+//   ._loading {
+//     width: 50px;
+//     margin: 0 auto;
+//     height: 200px;
+//   }
+
+//   ._block_wrap {
+//     max-width: 840px;
+//     // min-height: 267px;
+//     min-height: 220px;
+//     margin: 0 auto;
+
+//     .item {
+//       margin-bottom: 50px;
+//     }
+//   }
+//   ._block,._disable_block {
+//     width: 236px;
+//     height: 220px;
+//     overflow: visible;
+//     text-align: center;
+//     float: left;
+//     margin-left: 30px;
+//     position: relative;
+//     .logo {
+//       content: ' ';
+//       width: 42px;
+//       height: 49px;
+//       display: inline-block;
+//       margin-top: 35px;
+//     }
+//     .name {
+//       height: 28px;
+//       font-size: 20px;
+//       font-weight: 400;
+//       color: rgba(255, 255, 255, 1);
+//       line-height: 28px;
+//       margin-top: 9px;
+//     }
+//     .desc {
+//       width: 158px;
+//       height: 67px;
+//       font-size: 14px;
+//       font-weight: 400;
+//       color: #2c3641;
+//       margin-left: 39px;
+//       text-align: left;
+//       position: absolute;
+//       left: 0;
+//       top: 165px;
+//     }
+//     .go {
+//       width: 142px;
+//       height: 30px;
+//       line-height: 30px;
+//       border-radius: 15px;
+//       display: inline-block;
+//       background: #fff;
+//       border: solid 1px #fff;
+//       position: absolute;
+//       bottom: 1px;
+//       left: 0;
+//       margin-left: 47px;
+//     }
+//   }
+
+//   ._disable_block{
+//     opacity:0.3;
+//     .go{
+//       cursor: auto;
+//     }
+//   }
+
+//   ._block:before {
+//     background: rgba(0, 0, 0, .05);
+//     border-radius: 8px;
+//     content: " " !important;
+//     height: 100%;
+//     left: 0;
+//     opacity: 0;
+//     pointer-events: none;
+//     position: absolute;
+//     top: 0;
+//     -webkit-transform: scale(.96);
+//     transform: scale(.96);
+//     width: 100%;
+//     z-index: 1001;
+//   }
+//   ._block:hover:before {
+//     -webkit-animation: tapAnimation .25s cubic-bezier(.31, 1, .34, 1) forwards;
+//     animation: tapAnimation .25s cubic-bezier(.31, 1, .34, 1) forwards;
+//   }
+//   .beautiful, .restaurant, .retail {
+//     width: 236px;
+//     height: 170px;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
+//   /*美业*/
+//   .beautiful_block {
+//     .beautiful {
+//       background: transparent url(../images/industry/beautiful-bg.png) no-repeat 0 0;
+//       background-size: cover;
+//     }
+//     .logo {
+//       background: transparent url(../images/industry/beautiful-logo.png) no-repeat 0 0;
+//       background-size: cover;
+//     }
+//     .go {
+//       border-color: rgba(255, 62, 123, 1);
+//       background: rgba(255, 62, 123, 1);
+//       box-shadow: 0 4px 8px 0 rgba(255, 62, 123, 0.54);
+//       color: #fff;
+//     }
+//   }
+
+//   /*餐饮*/
+//   .restaurant_block {
+//     .restaurant {
+//       background: transparent url(../images/industry/restaurant-bg.png) no-repeat 0 0;
+//       background-size: cover;
+//     }
+//     .name {
+//       margin-top: 12px;
+//     }
+//     .logo {
+//       width: 47px;
+//       height: 46px;
+//       background: transparent url(../images/industry/restaurant-logo.png) no-repeat 0 0;
+//       background-size: cover;
+//     }
+//     .go {
+//       border-color: rgba(255, 136, 70, 1);
+//       background: #fff;
+//       color: rgba(255, 136, 70, 1);
+//     }
+//   }
+
+//   /*零售*/
+//   .retail_block {
+//     .retail {
+//       background: transparent url(../images/industry/retail-bg.png) no-repeat 0 0;
+//       background-size: cover;
+//     }
+//     .name {
+//       margin-top: 20px;
+//     }
+//     .logo {
+//       width: 45px;
+//       height: 39px;
+//       background: transparent url(../images/industry/retail-logo.png) no-repeat 0 0;
+//       background-size: cover;
+//     }
+//     .go {
+//       border-color: rgba(67, 121, 237, 1);
+//       background: #fff;
+//       color: rgba(67, 121, 237, 1);
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+.start-up-industry {
+  margin: 35px auto;
+  font-family: PingFangSC-Regular;
+
+  .title {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(44, 54, 65, 1);
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  ._loading {
+    width: 50px;
+    margin: 0 auto;
+    height: 200px;
+  }
+
+  ._block_wrap {
+    max-width: 732px;
+    min-height: 220px;
+    margin: 0 auto;
+
+    .item {
+      margin-bottom: 50px;
+    }
+
+    &>.item:nth-child(3n + 2) {
+      margin-left: 66px;
+      margin-right: 66px;
+    }
+  }
+
+  ._block,._disable_block {
+    width: 200px;
+    height: 220px;
+    overflow: visible;
+    text-align: center;
+    float: left;
+    position: relative;
+
+    .item-top {
+      width: 200px;
+      height: 120px;
+      position: relative;
+      border-radius:4px;
+      .logo {
+        content: ' ';
+        display: inline-block;
+        margin-top: 25px;
+      }
+      .name {
+        font-size:16px;
+        font-family:MicrosoftYaHei;
+        color:rgba(255,255,255,1);
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        width: 200px;
+        left: 0;
+      }
+    }
+    .desc {
+
+      font-family:MicrosoftYaHei;
+      color:rgba(44,54,65,1);
+      line-height:24px;
+      width: 168px;
+      height: 40px;
+      font-size: 12px;
+      font-weight: 400;
+      margin-left: 16px;
+      text-align: left;
+      position: absolute;
+      left: 0;
+      top: 130px;
+    }
+    .go {
+      width: 142px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      display: inline-block;
+      background: #fff;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      margin-left: 29px;
+      border-radius:15px;
+      border:1px solid rgba(234,234,234,1);
+      font-size:16px;
+      font-family:PingFangSC-Regular;
+      font-weight:400;
+      color:rgba(160,160,160,0.8);
+      line-height:30px;
+    }
+
+
+    .go:hover {
+      background:rgba(67,121,237,1);
+      font-family:PingFangSC-Regular;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+    }
+  }
+
+
+  /*美业*/
+  .beautiful_block {
+    .logo {
+      width: 40px;
+      height: 47px;
+      background: transparent url(../images/industry/beautiful-logo.png) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+  /*零售*/
+  .retail_block {
+    .logo {
+      width: 45px;
+      height: 39px;
+      background: transparent url(../images/industry/retail-logo.png) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+  /*鞋服*/
+  .clother_block {
+    .logo {
+      width: 47px;
+      height: 46px;
+      background: transparent url(../images/industry/clother-logo.png) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+  /*教育*/
+  .education_block {
+    .logo {
+      width: 42px;
+      height: 43px;
+      background: transparent url(../images/industry/education-logo.png) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+  /*健身*/
+  .bodybuilding_block {
+    .logo {
+      width: 45px;
+      height: 39px;
+      background: transparent url(../images/industry/bodybuilding-logo.png) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+  /*生鲜*/
+  .fruit_block {
+    .logo {
+      width: 47px;
+      height: 46px;
+      background: transparent url(../images/industry/fruit-logo.png) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+}

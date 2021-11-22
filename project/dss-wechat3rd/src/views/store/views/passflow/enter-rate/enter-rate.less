@@ -1,0 +1,162 @@
+.enter-rate-container {
+  min-width: 700px;
+  overflow: auto;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .el-select {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70px;
+    vertical-align: middle;
+  }
+
+  .btn{
+    vertical-align: middle;
+  }
+}
+
+
+.detail-container {
+  margin-top: 10px;
+  background: #fff;
+
+  .card-title {
+    //padding: 10px 30px 0
+  }
+
+  .customer-chart {
+    //padding: 0 20px
+  }
+
+  .el-pagination {
+    text-align: center;
+    padding: 30px 0
+  }
+
+}
+
+
+.enter-rate-line {
+  background: #fff;
+
+  .card-title {
+    //padding: 17px 30px 0px;
+  }
+  .customer-chart {
+    overflow: hidden;
+    //padding: 17px 30px;
+  }
+
+  .line-content {
+    width: 100%;
+    height: 380px;
+    float: left;
+  }
+}
+
+.enter-time-distribution {
+  margin-top: 14px;
+
+  .distribution-label {
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3B4757;
+    margin-bottom: 38px;
+  }
+
+  .passenger-container {
+    border-right: 1px solid #9CA3AA;;
+  }
+
+  .enter-container {
+    display: flex;
+    height: 142px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 26px;
+
+    .enter-time-num {
+      height: 51px;
+      margin-bottom: 18px;
+      line-height: 51px;
+      text-align: center;
+      font-family: DINPro-Bold;
+      font-size: 40px;
+      color: #3B4757;
+      letter-spacing: 0;
+    }
+
+    .passenger-num {
+      margin-bottom: 15px;
+      height: 64px;
+      line-height: 64px;
+      font-size: 50px;
+      color: #FF6F3A;
+    }
+
+    .enter-time-label {
+      height: 22px;
+      line-height: 22px;
+      font-family: PingFangSC-Regular;
+      text-align: center;
+      font-size: 16px;
+      color: #9CA3AA;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1200px){
+  .enter-time-distribution {
+
+    .distribution-label {
+      font-size: 16px;
+    }
+
+    .enter-container {
+      height: 120px;
+      .enter-time-num {
+        font-size: 30px;
+      }
+
+      .passenger-num {
+        font-size: 36px;
+      }
+
+      .enter-time-label {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px){
+  .enter-time-distribution {
+
+    .distribution-label {
+      font-size: 16px;
+    }
+
+    .enter-container {
+      height: 10vw;
+      .enter-time-num {
+        height: 3vw;
+        line-height: 3vw;
+        font-size: 2vw;
+      }
+
+      .passenger-num {
+        font-size: 3vw;
+      }
+
+      .enter-time-label {
+        font-size: 16px;
+      }
+    }
+  }
+}

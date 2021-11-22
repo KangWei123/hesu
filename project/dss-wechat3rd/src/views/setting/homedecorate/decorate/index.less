@@ -1,0 +1,480 @@
+.produce-container {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  min-width: 990px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #f5f7fa;
+
+  .Add-Manage-Button {
+    top: -47px;
+  }
+
+  .produce-container-flex {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 56px);
+    overflow: hidden;
+  }
+  // 温馨提示
+
+  .custom-decorate-tips {
+    margin-bottom: 24px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  // 左侧组件库区域
+
+  .components-area {
+    width: 260px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 1px solid rgba(230, 230, 230, 0.5);
+    padding: 0 10px;
+
+    .dss-btn-primary {
+      margin: 30px 50px;
+    }
+
+    .el-collapse {
+      border-top: 0;
+    }
+
+    .el-collapse,
+    .el-collapse-item__wrap {
+      border-bottom: none;
+    }
+
+    .el-collapse-item {
+      .el-icon-arrow-right::before {
+        content: '\e790';
+      }
+
+      .el-collapse-item__content {
+        padding-bottom: 15px;
+      }
+    }
+
+    .el-collapse-item__arrow.is-active {
+      transform: rotate(180deg);
+    }
+
+    .el-collapse-item__header {
+      font-family: PingFangSC, PingFangSC-Medium;
+      padding: 10px 0 4px 10px;
+      height: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #191c3d;
+      position: relative;
+      margin-bottom: 7px;
+      border-bottom: none;
+    }
+
+    .el-collapse-item__header::before {
+      content: '';
+      width: 3px;
+      height: 16px;
+      background: #ff8341;
+      position: absolute;
+      top: 13px;
+      left: 0;
+    }
+
+    .components-container {
+      line-height: 0;
+      margin-left: 1px;
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    .drag-class {
+      border: 1px solid rgb(78, 123, 229);
+      background-color: white;
+    }
+
+    .x {
+      margin: 0 !important;
+      width: 69px;
+      height: 69px;
+      // border: 1px solid rgba(233, 236, 241, 1);
+      border-left: 0;
+      border-top: 0;
+      position: relative;
+      display: inline-block !important;
+
+      .item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .item-cover {
+          position: absolute;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          // background-color: rebeccapurple;
+          top: 0;
+        }
+      }
+
+      .img {
+        width: 69px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        padding-top: 8px;
+      }
+
+      .name {
+        height: 17px;
+        line-height: 17px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #858c99;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .x:hover {
+      background: #f5f7fa;
+    }
+
+    .x:nth-child(-n + 3) {
+      // border-top: 1px solid rgba(233, 236, 241, 1);
+    }
+
+    .x:nth-child(3n + 1) {
+      // border-left: 1px solid rgba(233, 236, 241, 1);
+    }
+
+    // 悬浮框样式
+
+    .icon-dialogModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-pageInfoModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-posterModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-videoModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-liveModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-imageModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-titleModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-cardSwiperModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-giftCardModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-productModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-estateModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-preSaleModule {
+      width: 29px;
+      height: 24px;
+    }
+
+    .icon-serveModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-magicModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-hotAreaModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-textNavModule {
+      width: 32px;
+      height: 28px;
+    }
+
+    .icon-storeModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-assistBlankModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-assistLineModule {
+      width: 32px;
+      height: 26px;
+    }
+
+    .icon-collageModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-couponsModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-haggleModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-navigationModule {
+      width: 30px;
+      height: 28px;
+    }
+
+    .icon-activityModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-shopCardModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-posterRecommendModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-roomsModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-ticketsModule {
+      width: 30px;
+      height: 27px;
+    }
+
+    .icon-articleModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-luckyModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-lucky {
+      width: 30px;
+      height: 30px;
+    }
+
+    .icon-seckillModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-scanModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-freeModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-integralModule,
+    .icon-cardPackModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-promotionModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-ebooksModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-equityGoodsModule {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  // 中间屏幕区域
+
+  .screen-area {
+    .screen {
+      width: 375px; //比父类多出15px
+      height: 602px;
+      position: relative;
+      overflow: hidden;
+
+      .screen-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .screen-container {
+        width: 100%;
+        height: 590px;
+        position: absolute;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .screen-x {
+          position: relative;
+          // overflow: hidden;
+          // width: 375px;
+
+          &.nested {
+            position: relative;
+            z-index: 10;
+          }
+
+          // border:1px dashed transparent;
+
+          & > .field {
+            box-sizing: border-box;
+          }
+
+          .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 1px dashed rgba(151, 151, 151, 1);
+            display: none;
+            cursor: move;
+
+            .com-close {
+              cursor: pointer !important;
+              position: absolute;
+              top: 0;
+              right: 0;
+              z-index: 1;
+            }
+          }
+
+          & .select,
+          &:hover > .cover {
+            display: block;
+          }
+        }
+      }
+
+      .drag {
+        background-color: lightgrey;
+        overflow: hidden;
+        cursor: move;
+      }
+    }
+  }
+
+  // 右侧编辑区域
+
+  .editor-area-wrapper {
+    width: 367px;
+    // min-height: 667px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(230, 230, 230, 0.5);
+
+    .editor-area::-webkit-scrollbar {
+      display: none;
+    }
+
+    .editor-area {
+      width: 400px;
+      // min-height: 667px;
+      overflow-y: auto;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 0 4px 4px 0;
+      height: 100%;
+    }
+  }
+
+  .screen-contanier-area {
+    margin-top: 20px;
+  }
+}
+
+.screen-area {
+  background: url('../../../../images/decorate/phone-header.png') no-repeat 100% 100%;
+  background-size: cover;
+  width: 375px;
+  height: 667px;
+  overflow-y: hidden;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid rgba(230, 230, 230, 0.5);
+  margin-top: 25px;
+
+  .header {
+    margin-top: 24px;
+    cursor: pointer;
+
+    .page-info-module {
+      margin-top: 12px;
+      width: 100%;
+      font-weight: 600;
+      font-size: 17px;
+    }
+  }
+}
+
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  overflow: unset;
+  cursor: move;
+}

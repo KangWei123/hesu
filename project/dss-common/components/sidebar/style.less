@@ -1,0 +1,190 @@
+.common-side-menu::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+
+.common-side-menu::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #C6D4E7;
+  border-radius: 3px;
+}
+
+.common-side-menu::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  //-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background: #E3E8EF;
+}
+
+.common-side-menu {
+  position: absolute;
+  overflow: hidden;
+  height: calc(100vh - @header-height);
+  overflow-y: auto;
+  background: #ECEFF3;
+
+  [class^="icon-"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+  }
+
+  [class^="icon-"]:before {
+    content: ''
+  }
+
+  .icon-analysis-da {
+    background-image: url('../../img/analysis/analysis-da.png');
+  }
+
+  .icon-analysis-store {
+    background-image: url('../../img/analysis/analysis-store.png');
+  }
+
+  .icon-analysis-store-mgr {
+    background-image: url('../../img/analysis/analysis-store-mgr.png');
+  }
+
+  .icon-store-manage {
+    background-image: url('../../img/sidebar/logos/store-manage.png');
+  }
+
+  .icon-staff-manage {
+    background-image: url('../../img/sidebar/logos/staff-manage.png');
+  }
+
+  .icon-device-manage {
+    background-image: url('../../img/sidebar/logos/device-manage.png');
+  }
+
+  .icon-member-manage {
+    background-image: url('../../img/sidebar/logos/member-manage.png');
+  }
+
+  .icon-member-setting {
+    background-image: url('../../img/sidebar/logos/member-setting.png');
+  }
+
+  .menu-divider {
+    padding: 0 12px;
+    line-height: 40px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #343434;
+
+    &.divider-line {
+      margin-top: 10px;
+      border-top: 1px solid #CFD1E0;
+      ;
+    }
+  }
+
+  .el-menu-item.is-active,
+  .el-menu-item:focus,
+  .el-menu-item:hover,
+  .el-submenu.is-active,
+  .el-submenu__title:hover {
+    background-color: #CFDCF2;
+    color: @blue-color;
+
+    .icon-store-manage {
+      background-image: url('../../img/sidebar/logos/store-manage-selected.png');
+    }
+
+    .icon-staff-manage {
+      background-image: url('../../img/sidebar/logos/staff-manage-selected.png');
+    }
+
+    .icon-device-manage {
+      background-image: url('../../img/sidebar/logos/device-manage-selected.png');
+    }
+
+    .icon-member-manage {
+      background-image: url('../../img/sidebar/logos/member-manage-selected.png');
+    }
+
+    .icon-member-setting {
+      background-image: url('../../img/sidebar/logos/member-setting-selected.png');
+    }
+  }
+
+  .el-menu-item.is-active:before {
+    border: none;
+  }
+
+  .el-menu-item.is-disabled {
+    opacity: 0.55;
+  }
+
+  .el-menu {
+    background-color: #ECEFF3;
+  }
+
+  .el-menu-item,
+  .el-submenu__title {
+    color: rgba(51, 51, 51, 1);
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .el-submenu__title i,
+  .el-menu-item i {
+    margin-right: 0;
+  }
+
+  .el-submenu.is-opened {
+    background: #ECEFF3;
+
+    .el-submenu__title {
+      color: #333333;
+    }
+
+    .el-menu {
+      background: #ECEFF3;
+    }
+  }
+
+  .redirect {
+    color: #333333;
+    display: block;
+    position: relative;
+    z-index: 1
+  }
+
+  .redirect:hover {
+    color: black;
+  }
+  .el-menu-item.clear-focus{
+    background-color: #CFDCF2;
+    color: @blue-color-hover;
+    box-shadow: inset 3px 0 0 #3499fe;
+  }
+  .el-menu-item.clear-focus:focus {
+    color: #757575;
+    background-color: #ECEFF3;
+    box-shadow: none;
+  }
+
+   .el-menu-item.is-active{
+    background-color: #cfdcf2;
+    color: @blue-color-hover;
+    box-shadow: inset 3px 0 0 #256eff;
+  }
+   .el-menu-item:hover{
+    background-color: #cfdcf2;
+    color: @blue-color-hover;
+    box-shadow: inset 3px 0 0 #256eff;
+  }
+
+
+  .el-submenu .el-menu-item {
+    padding-left: 30px !important;
+  }
+}

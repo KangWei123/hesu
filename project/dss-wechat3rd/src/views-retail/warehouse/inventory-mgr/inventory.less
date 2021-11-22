@@ -1,0 +1,82 @@
+.inventory-outbound {
+  .filter-botton {
+    position: relative;
+    top: -5px;
+  }
+}
+.inventory {
+
+  .bound-left {
+    float: left;
+    .bound-status {
+      margin-left:10px;
+      cursor: pointer;
+    }
+    .checked{
+      color: @blue-color;
+    }
+  }
+  .el-range-editor--mini.el-input__inner, .el-range-editor--mini .el-range-separator{
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .cell .operation > a {
+    color:@ui-function-color-link !important;
+  }
+
+  // 重置按钮
+  .reset-btn {
+    margin-left: 17px;
+    margin-top: 4px;
+  }
+
+  // tabs下划线
+  .el-tabs__nav-wrap::after {
+    height: 0px;
+  }
+
+  
+
+  // .Batch-btn{
+  //   padding: 20px;
+  //   float: left;
+  // }
+
+  .wkt-opt-label-container {
+    padding-bottom: 10px !important;
+    padding-left: 20px;
+    padding-top: 16px;
+  }
+  .inventory-content {
+    padding: 0 20px 20px;
+  }
+
+  .custom-label {
+    position: relative;
+    padding:20px 20px 0 20px;
+    height: 30px;
+    text-align: right;
+    margin-top: 16px;
+  }
+}
+
+.goods-info {
+  min-width: 280px;
+
+  .goods-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+  }
+
+  img {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+}
+

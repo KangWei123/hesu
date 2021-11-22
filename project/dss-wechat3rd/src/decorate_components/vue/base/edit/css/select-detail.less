@@ -1,0 +1,78 @@
+.image-container {
+  .img-preview1 {
+
+    padding: 10px 20px;
+    margin: 20px;
+    border: 1px solid #dcdfe6;
+    position: relative;
+    background: #F5F7FA;
+
+    
+    .com-close{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+
+    .nav-column {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .nav-column:first-child{
+      width: 72px;
+      text-align: right;
+    }
+    
+    .img{
+      width:138px;
+      height:44px;
+      display: inline-block;
+      vertical-align: top;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .link-page, .link-detail-text {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .delete {
+        width: 15px;
+        height: 15px;
+        background: transparent url(../../images/decorate-close.png) no-repeat 0 0;background-size: cover;
+        margin-left: 5px;
+        display: inline-block;
+        border: 1px dashed #DCE1E6;
+      }
+    }
+
+    .dss-link1 {
+      color: #2e8dff;
+      cursor: pointer;
+    }
+
+    .detail-image {
+      width: 56px;
+      height: 56px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      cursor: pointer;
+
+      .delete {
+        width: 15px;
+        height: 15px;
+        background: transparent url(../../images/decorate-close.png) no-repeat 0 0;background-size: cover;
+        position: absolute;
+        top: 3px;
+        right: -20px;
+        display: inline-block;
+        border: 1px dashed #DCE1E6;
+      }
+      &.detail-text {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

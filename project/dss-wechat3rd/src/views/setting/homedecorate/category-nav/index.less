@@ -1,0 +1,51 @@
+.category-container{
+  .bg-mixin;
+  position: relative;
+  padding: 20px 20px 60px;
+  height: auto;
+  overflow: hidden;
+  margin-top: 16px;
+  border-radius: 4px 4px 0 0;
+
+  &::after {
+    position: absolute;
+    top: 263px;
+    left: 546px;
+    content: '';
+    width: 610px;
+    height: 1px;
+    background:#e5e5e5;
+  }
+
+  .category-head{
+    position: absolute;
+    top: 62px;
+    left: 546px;
+    font-size: @standard-font;
+    overflow: hidden;
+    z-index: 99;
+     
+    .category-item {
+      overflow: hidden;
+      line-height: 30px;
+      margin-top: 24px;
+    }
+    .left{
+      float: left;
+      width: 100px;
+      color: @ui-font-color-darkGrey;
+    }
+    .right{
+      float: left;
+      margin-left: 10px;
+      .el-radio {
+        display: inline-block;
+        width: 108px;
+        text-align: center;
+      }
+      .notice{
+        color: @light-black-color;
+      }
+    }
+  }
+}

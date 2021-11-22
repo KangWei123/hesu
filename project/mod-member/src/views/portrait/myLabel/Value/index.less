@@ -1,0 +1,167 @@
+/deep/h6 {
+  font-weight: inherit;
+}
+/deep/var {
+  font-style: inherit;
+}
+h6 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+h6::before {
+  counter-increment: valueCounter;
+  content: '标签值' counter(valueCounter) ':';
+  position: absolute;
+  right: 100%;
+  width: 111px;
+  text-align: right;
+  margin-right: 8px;
+  color: #333;
+  font-size: 12px;
+}
+/deep/.el-input {
+  width: 252px;
+}
+/deep/.remove {
+  height: 17px;
+  width: 17px;
+  border: 1px solid #3879fb;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 20px;
+  &::before,
+  &::after {
+    content: '';
+    height: 1px;
+    background: #3879fb;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 3px;
+    right: 3px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+/deep/var {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: #3879fb;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -56px;
+  cursor: pointer;
+}
+h6 + div {
+  position: relative;
+  margin-bottom: 40px;
+}
+h6 + div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 30px;
+  margin-right: 10px;
+  border-top: 1px solid #dcdde0;
+  border-left: 1px solid #dcdde0;
+  border-bottom: 1px solid #dcdde0;
+}
+section {
+  margin: 16px 0;
+  border: 1px solid #e4e7ed;
+}
+header {
+  padding: 0 20px;
+  height: 30px;
+  background: #e4e7ed;
+  display: flex;
+  align-items: center;
+}
+header > div {
+  flex: 1;
+  color: #333;
+}
+header aside {
+  color: #fff;
+  background: #256eff;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+header aside::before,
+header aside::after {
+  content: '';
+  background: #fff;
+  margin: auto;
+  position: absolute;
+}
+header aside::before {
+  height: 2px;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+}
+header aside::after {
+  width: 2px;
+  left: 0;
+  right: 0;
+  top: 4px;
+  bottom: 4px;
+}
+header + div {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/deep/section var {
+  position: initial;
+  margin-left: 24px;
+  margin-right: -54px;
+}
+/deep/section var::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 39px;
+  width: 30px;
+  margin-right: 10px;
+  border-top: 1px solid #dcdde0;
+  border-left: 1px solid #dcdde0;
+  border-bottom: 1px solid #dcdde0;
+  pointer-events: none;
+}
+/deep/section var::after {
+  content: attr(content);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: #3879fb;
+  display: block;
+  position: relative;
+}
+ol {
+  counter-reset: ruleCounter;
+}

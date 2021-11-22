@@ -1,0 +1,256 @@
+<template>
+  <el-dialog @close="onClose" :visible.sync="dialogVisible" title="模板分类管理" width="40%">
+    <div class="append-new-tag">
+      <el-button :disabled="isDoing || initing" @click="onAddTag" type="text">新增分类</el-button>
+    </div>
+    <!-- 新增分类 -->
+    <el-table :data="tableData" v-loading="initing" class="dialog-table">
+      <el-table-column label="模板分类名称" min-width="100" prop="categoryName">
+        <template slot-scope="scope">
+          <template v-if="editing.isEditing && scope.row.id === editing.index">
+            <el-input maxlength="10" placeholder="10字以内" v-model.trim="editing.value"></el-input>
+            <div class="error-tip" v-if="errMsg" style="color: red">{{errMsg}}</div>
+          </template>
+          <template v-else>{{ scope.row.categoryName }}</template>
+        </template>
+      </el-table-column>
+      <el-table-column align="left" label="操作" min-width="100">
+        <template slot-scope="scope">
+          <!-- 编辑状态 -->
+          <template v-if="editing.isEditing && scope.row.id === editing.index">
+            <el-button
+              :disabled="!(editing.value && editing.value.length)"
+              @click="onConfirm(scope)"
+              type="text"
+            >保存</el-button>
+            <el-button @click="onCancel(scope)" type="text">取消</el-button>
+          </template>
+          <!-- 普通状态 -->
+          <template v-else>
+            <el-button :disabled="isDoing" @click="onEdit(scope)" type="text">编辑</el-button>
+            <el-tooltip
+              class="item"
+              effect="dark"
+              :disabled="scope.row.referNum == 0 ? true : false"
+              content="该分类下存在模板"
+              placement="top"
+            >
+              <el-button
+                :class="{ 'not-allowed-link': !scope.row.canDelete || isDoing || !!scope.row.categoryCount }"
+                @click="onDelete(scope)"
+                type="text"
+              >删除</el-button>
+            </el-tooltip>
+          </template>
+        </template>
+      </el-table-column>
+    </el-table>
+    <!-- 分页 -->
+    <span slot="footer" class="dialog-footer">
+      <el-pagination
+        :current-page="page.pageNo"
+        :page-size="page.pageSize"
+        :total="page.totalCount"
+        @current-change="onChangePage"
+        layout="prev, pager, jumper, next, total"
+      ></el-pagination>
+    </span>
+  </el-dialog>
+</template>
+
+<script>
+import services from '@/dss-common/utils/services';
+import constants from '@/dss-wechat3rd/src/constants/index';
+import api from '@/dss-wechat3rd/src/api/template.js';
+
+export default {
+  name: 'CategoryDialog',
+  watch: {
+    value: {
+      immediate: true,
+      handler(val) {
+        this.dialogVisible = val;
+      }
+    },
+    dialogVisible(newVal) {
+      this.$emit('input', newVal);
+    }
+  },
+  props: {
+    value: {
+      type: Boolean,
+      default: false,
+      required: true
+    }
+  },
+  computed: {
+    isDoing() {
+      return this.editing.isEditing || this.isAdding;
+    }
+  },
+  data() {
+    return {
+      dialogVisible: false,
+      tableData: [],
+      editing: {
+        index: '',
+        value: '',
+        isEditing: false
+      },
+      errMsg: '',
+      isAdding: false,
+      loading: false,
+      initing: false,
+      page: {
+        pageNo: 1,
+        pageSize: 6,
+        totalCount: 0
+      },
+      mockData: []
+    };
+  },
+  methods: {
+    tableDataAdapter(data) {
+      return data.map(item => {
+        item.canDelete = item.referNum == 0 ? true : false;
+        return item;
+      });
+    },
+    fetchData() {
+      this.initing = true;
+      let params = {
+        pageNo: this.page.pageNo,
+        pageSize: this.page.pageSize
+      };
+      api
+        .queryTemCategoryList(params)
+        .then(res => {
+          this.tableData = this.tableDataAdapter(res.data);
+          this.page.totalCount = res.totalCount;
+        })
+        .catch(e => {
+          this.$message.error(e.errorMessage);
+        })
+        .finally(e => {
+          this.initing = false;
+        });
+    },
+    // 操作管理分类
+    async onConfirm(scope) {
+      this.tableData.filter(item => item.id === this.editing.index)[0].categoryName = this.editing.value;
+      this.editing.index = '';
+      this.editing.value = '';
+      let _obj = {
+        categoryName: scope.row.categoryName,
+        id: scope.row.id
+      };
+      this.initing = true;
+      api
+        .saveQaTemCategory(_obj)
+        .then(d => {
+          let tips = _obj.id ? '修改分类成功' : '新增分类成功';
+          this.$message.success(tips);
+        })
+        .catch(e => {
+          this.$message.error(e.errorMessage);
+        })
+        .finally(e => {
+          this.fetchData();
+          this.editing.isEditing = false;
+          this.isAdding = false;
+        });
+    },
+    onEdit(scope) {
+      this.errMsg = '';
+      this.editing.index = scope.row.id;
+      this.editing.value = this.tableData.filter(item => item.id === scope.row.id)[0].categoryName;
+      this.editing.isEditing = true;
+    },
+    onDelete(scope) {
+      if (this.isDoing || !!scope.row.categoryCount) {
+        return;
+      }
+      if (!scope.row.canDelete) {
+        this.$message.info('该分类下有模板，无法删除');
+        return;
+      }
+      this.initing = true;
+      api
+        .delQaTemCategory({ id: scope.row.id })
+        .then(d => {
+          this.$message.success('删除分类成功');
+        })
+        .catch(e => {
+          this.$message.error(e.errorMessage);
+        })
+        .finally(() => {
+          if (this.tableData.length <= 1 && this.page.pageNo > 1) {
+            this.page.pageNo = this.page.pageNo - 1;
+          }
+          this.fetchData();
+        });
+    },
+    onAddTag() {
+      this.isAdding = true;
+      let newId = '';
+      this.tableData.unshift({
+        id: newId,
+        categoryName: '',
+        canDelete: true
+      });
+      this.onEdit({ row: { id: newId } });
+    },
+    // 表单按钮
+    onCancel(scope) {
+      if (!(scope.row.categoryName && scope.row.categoryName.length)) {
+        let index = scope.$index;
+        this.tableData.splice(index, 1);
+      }
+      this.editing.isEditing = false;
+      this.isAdding = false;
+    },
+    // 切换页面
+    onChangePage(e) {
+      this.page.pageNo = e;
+      this.fetchData();
+    },
+    // 关闭弹窗
+    onClose() {
+      this.dialogVisible = false;
+    }
+  },
+  mounted() {
+    this.fetchData();
+  }
+};
+</script>
+
+<style lang="less" scoped>
+.error-tip {
+  position: absolute;
+}
+.append-new-tag {
+  text-align: right;
+  padding-right: 10px;
+  /deep/ & > .el-button {
+    display: inline-block;
+  }
+}
+
+.not-allowed-link {
+  background: none;
+  border: none;
+}
+
+/deep/ .not-allowed-link span {
+  cursor: not-allowed;
+  color: #ccc;
+  position: relative;
+}
+.dialog-table {
+  max-height: 600px;
+}
+.dialog-table::before {
+  height: 0px;
+}
+</style>

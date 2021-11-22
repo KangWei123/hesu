@@ -1,0 +1,37 @@
+@header: 48px; //头部高度
+@scroll: 17px; //滚动条高度
+@footerHeight: 44px; //footer高度
+@titleHeight: 58px; //标题高度
+.logistics-setting {
+  background-color: #ffffff;
+  padding: 20px;
+  min-height: calc(100vh - @header - @footerHeight - @titleHeight - 10px);
+  margin-top: 16px;
+  
+  .view-app {
+    .row {
+      font-size: 14px;
+      color: rgba(133, 140, 153, 1);
+    }
+
+    .title,
+    .value {
+      display: inline-block;
+    }
+  }
+
+  .logistics-edit-box {
+    margin-top: 20px;
+  }
+
+  .edit-app {
+    display: inline-block;
+
+    .tab {
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+      color: #858c99;
+    }
+  }
+}

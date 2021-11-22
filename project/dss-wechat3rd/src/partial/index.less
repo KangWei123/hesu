@@ -1,0 +1,174 @@
+@import './dialog';
+@import './popover';
+html {
+  background: transparent !important;
+}
+body {
+  background: rgba(240, 242, 247, 1);
+  font-family: PingFangSC-Regular;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-pc {
+  position: fixed !important;
+  width: 100%;
+  z-index: 11;
+  .key-header {
+    .header {
+      min-width: 800px !important;
+    }
+  }
+}
+
+.store-logo {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 16px 12px 0 20px;
+}
+//美业
+[industry='beautiful'] .store-logo {
+  background: transparent url(../images/logos/beautiful.png) no-repeat 0 0;
+  // background-size: cover!important;
+}
+//餐饮
+[industry='restaurant'] .store-logo {
+  background: transparent url(../images/logos/restaurant.png) no-repeat 0 0;
+  // background-size: cover!important;
+}
+//零售
+[industry='retail'] .store-logo {
+  background: transparent url(../images/logos/retail.png) no-repeat 0 0;
+  // background-size: cover!important;
+}
+
+//业务样式－－－－－－－－－－
+
+//搜索域下拉框字体大小
+.dss-query-select-dropdown__item {
+  font-size: 12px;
+}
+
+.dss-filter-input {
+  width: 260px !important;
+}
+
+.dss-filter-label {
+  width: 83px;
+  height: 19px;
+  line-height: 19px;
+  font-size: 14px;
+  color: #566980;
+  display: inline-block;
+  text-align: right;
+}
+
+.dss-filter-large-input {
+  width: 185px;
+}
+
+.dss-btn-middle {
+  width: 104px;
+  height: 28px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.dss-btn-small {
+  width: 70px;
+  height: 22px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.dss-btn-primary {
+  background: rgba(67, 121, 237, 1);
+  border-radius: 4px;
+  border: 1px solid rgba(67, 121, 237, 1);
+  color: #fff;
+}
+.dss-btn-primary:hover {
+  background-color: rgba(67, 121, 237, 0.8);
+  border-color: rgba(67, 121, 237, 0.8);
+  color: #fff;
+}
+
+.dss-btn-plain {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(186, 198, 211, 1);
+  border-radius: 4px;
+  color: rgb(67, 121, 237);
+}
+.dss-btn-plain:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(67, 121, 237, 0.5);
+  color: rgb(67, 121, 237);
+}
+
+.dss-form {
+  width: 420px;
+  margin: 0 auto;
+  padding-top: 36px;
+
+  .dss-map {
+    width: 500px;
+    height: 270px;
+    font-size: 12px;
+  }
+
+  .el-input__inner {
+    width: 325px;
+    height: 30px;
+  }
+
+  .dss-small-select {
+    width: 130px;
+    height: 30px;
+    .el-input__inner {
+      width: 130px;
+      height: 30px;
+    }
+    .el-select__tags {
+      max-width: 110px !important;
+      top: 65%;
+    }
+  }
+  .dss-min-select {
+    width: 80px;
+    height: 30px;
+    .el-input__prefix {
+      display: none;
+    }
+    .el-input__inner {
+      width: 80px;
+      height: 30px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+.dss-upload-title {
+  height: 19px;
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+  color: #2e8dff;
+  line-height: 19px;
+  margin-top: 30px;
+}
+
+a.dss-link {
+  color: rgba(46, 141, 255, 1);
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+}
+a.dss-link:hover {
+  color: rgba(46, 141, 255, 0.8);
+}

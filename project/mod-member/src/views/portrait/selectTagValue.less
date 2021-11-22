@@ -1,0 +1,112 @@
+.add-store .el-dialog {
+  width: 400px;
+}
+
+.modal-title {
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 18px;
+  text-align: left;
+  text-indent: 22px;
+  color: #000;
+  font-size: 16px;
+}
+
+.modal-title:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  width: 6px;
+  height: 20px;
+  background: #9e9cea;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e5e5e5;
+  .dialog-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    text-indent: 20px;
+  }
+}
+
+.label-option-wrapper {
+  padding: 0 40px 20px;
+
+  .label-option-head {
+    margin-bottom: 24px;
+  }
+
+  .condition_item_reverse {
+    font-style: normal;
+    color: #f58a8c;
+    margin-right: 12px;
+  }
+
+  .el-checkbox-group,
+  .el-radio-group {
+    display: block;
+    margin-bottom: 20px;
+
+    .el-radio,
+    .el-checkbox {
+      .input-label-empty {
+        width: 0;
+      }
+    }
+  }
+
+  .el-checkbox,
+  .el-radio {
+    ///width: 18%;
+    margin-right: 3%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+
+    .input-label-empty {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 18px;
+      vertical-align: bottom;
+      cursor: auto;
+    }
+
+    .el-checkbox__label {
+      display: inline;
+    }
+  }
+
+  .el-checkbox + .el-checkbox,
+  .el-radio + .el-radio {
+    margin-left: 0;
+  }
+
+  /* 重置下拉框样式 */
+
+  .el-select {
+    .el-select__input {
+      max-width: 100px !important;
+    }
+
+    .el-input__inner {
+      min-width: 600px;
+    }
+  }
+
+  .label-option-modal-page {
+    /* 重置下拉框样式 */
+
+    .el-select {
+      .el-input__inner {
+        min-width: auto;
+      }
+    }
+  }
+}

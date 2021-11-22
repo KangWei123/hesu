@@ -1,0 +1,86 @@
+<!-- <div class="key-footer" id="id_footer_wakedata">
+  <p class="key-footer-licence">
+    ©2018 珠海卓轩科技有限公司. All rights reserved.
+    <span style="margin-left: 10px;">备案号：<a target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备18086566号-1</a></span>
+  </p>
+</div>
+
+<script>
+  (function() {
+    //百度统计代码
+    /* eslint-disable */
+    var _hmt = _hmt || [];
+    (function (code) {
+      var hm = document.createElement('script');
+      hm.src = 'https://hm.baidu.com/hm.js?' + code;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(hm, s);
+    })('848554655fbe1811477db156843c99d1');
+  })();
+</script>
+
+<script type="text/javascript" src="//cdn.wakecloud.com/resources/dss-web-portal/libs/wkapi/h5/0.1.4/wkapi.js"></script>
+
+<script>
+  (function() {
+    //wakedata埋点统计
+    /* eslint-disable */
+    var hashList= [
+      '/wkb.html',
+      '/da.html',
+      '/store.html',
+      '/dmp.html',
+      '/dsp.html',
+      '/member.html',
+      '/system-setting.html',
+      '/console.html',
+      '/customized-store.html',
+      '/brand.html'
+    ];
+    var href = location.href;
+    var model = '';
+    for(var i =0 ,j = hashList.length;i<j;i++){
+      if( href.indexOf(hashList[i]) ){
+        model = 'hash';
+        break;
+      }
+    }
+    wkApi.init({
+      appId: 'wkappid',
+      appKey: 'wkappkey',
+      model: model
+    });
+    window.onerror = function(msg, file, lines) {
+      if (typeof msg !== 'string' || 'object' !== typeof window.JSON) {
+        return;
+      }
+      let stack = [];
+      let caller = arguments.callee.caller;
+      let regGetFunName = /function (\w*\([^(]*\))/;
+      let funCode, match;
+      while (caller) {
+        funCode = caller.toString();
+        match = funCode.match(regGetFunName);
+        stack.push((match && match[1]) || funCode);
+        caller = caller.caller;
+      }
+      function getTextOverFlow(text, maxLength) {
+        if (text.length <= maxLength) {
+          return text;
+        } else {
+          return text.substring(0, maxLength);
+        }
+      }
+      //上报日志
+      wkApi.error(
+        JSON.stringify({
+          mg: msg,
+          fi: file,
+          li: lines,
+          stk: getTextOverFlow(stack.join(''), 50) //报错代码所在的函数片段，不一定都有
+        })
+      );
+    };
+  })();
+</script>
+ -->

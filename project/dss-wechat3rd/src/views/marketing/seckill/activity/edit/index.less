@@ -1,0 +1,318 @@
+.seckill-edit {
+  background: #fff;
+  .head-box {
+    width: 700px;
+    font-size: 0px;
+    .td {
+      display: inline-block;
+      width: 200px;
+      font-size: 14px;
+    }
+    .long-td {
+      width: 250px;
+    }
+  }
+
+  .body-box {
+    width: 700px;
+    font-size: 0px;
+    .td {
+      display: inline-block;
+      width: 200px;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+    .long-td {
+      width: 250px;
+    }
+  }
+  .synchronization{
+    margin-left: 10px;
+  }
+
+
+
+  .wkt-card {
+    padding: 18px 30px;
+  }
+
+  .btn-delete {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: none;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 8px;
+    padding: 1px;
+    top: 5px;
+    background: #bac6d3;
+
+    &:active {
+      border-width: 0;
+    }
+
+    .el-icon-close {
+      color: #6c7e93;
+    }
+  }
+
+  .div-input {
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    background: #fff;
+    padding: 0 10px;
+    color: #606266;
+    font-size: 14px;
+    width: 150px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    cursor: not-allowed;
+  }
+
+  .btn-delete:hover {
+    color: #ff562d;
+  }
+
+  .seckill-edit-form {
+    padding: 20px;
+
+    .el-input,
+    .el-input-number {
+      max-width: 300px;
+    }
+
+    .middle-width {
+      width: 150px;
+    }
+
+    .tip-msg {
+      color: @light-black-color;
+      font-size: @small-font;
+    }
+
+    // 周期设置区域样式
+    .period-box {
+      .el-switch.is-checked {
+        margin: 6px 0px 20px 0px;
+
+        .el-switch__core {
+          border-color: rgb(37, 110, 255) !important;
+          background-color: rgb(37, 110, 255) !important;
+        }
+      }
+
+      .el-radio-group {
+        display: flex;
+        flex-direction: column;
+
+        .el-radio {
+          margin-bottom: 20px;
+        }
+
+        .el-radio:last-child {
+          margin-bottom: 0px;
+        }
+
+        .wot-item {
+          display: inline-block;
+          margin-top: 0px;
+
+          .el-select {
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+
+        .day-of-week-select {
+          width: 300px;
+          margin-right: 10px;
+          //height: 61px;
+          .el-form-item__error {
+            margin-left: 0px;
+          }
+        }
+
+        .el-input__inner {
+          border-color: #DCDEE0;
+        }
+
+        .is-error {
+          .el-input__inner {
+            border-color: #FB4938;
+          }
+        }
+
+        .hideTag {
+          .el-select__tags .el-tag {
+            &:first-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    /*商品选择样式*/
+    .form-goods {
+      width: 300px;
+      background: rgba(237, 241, 247, 1);
+      height: 28px;
+      line-height: 28px;
+      font-size: 12px;
+      border-radius: 2px;
+      padding: 0 9px;
+      box-sizing: border-box;
+      color: #31343B;
+      padding-right: 22px;
+      position: relative;
+      cursor: pointer;
+
+      div {
+        display: inline-block;
+        float: left;
+        margin-right: 25px;
+      }
+
+      .goods-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 230px;
+      }
+
+      .goods-price {
+        color: #ff562d;
+      }
+
+
+    }
+
+    /*门店选择样式*/
+    .form-store {
+      background: #edf1f7;
+      padding: 9px 17px 20px 17px;
+      max-width: 568px;
+
+      .store-label {
+        color: #31343b;
+      }
+
+      .store-item {
+        display: inline-block;
+        border: 1px solid #b2b5bb;
+        font-size: 12px;
+        width: 162px;
+        padding: 0 6px;
+        height: 26px;
+        line-height: 26px;
+        color: #595d66;
+        width: 162px;
+        margin-top: 10px;
+        position: relative;
+        margin-right: 4px;
+
+        .span {
+          display: block;
+          width: 110px;
+        }
+      }
+    }
+  }
+
+  .sku-table {
+    background: transparent;
+    border-radius: 4px;
+    margin-top: 0;
+  }
+
+  .sku-div {
+    display: inline-block;
+  }
+
+  .ladder-container {
+    background: @bg-color;
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 70px 0 0;
+    min-width: 450px;
+
+    &:hover .btn-delete {
+      display: inline-block;
+    }
+
+    .div-input,
+    .middle-width {
+      width: 200px;
+    }
+  }
+
+  .store-list-box {
+    margin-left: 150px;
+    margin-bottom: 20px;
+    width: 800px;
+
+    .el-tag {
+      margin-right: 10px;
+    }
+
+    .store-label {
+      height: 30px;
+      line-height: 30px;
+      background: rgba(245, 245, 245, 1);
+      padding-left: 23px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(51, 51, 51, 1);
+    }
+
+    .store-item-box {
+      max-height: 303px;
+      border: 1px solid rgba(235, 235, 235, 1);
+      padding: 9px 18px;
+      overflow: auto;
+
+      .store-item-disabled {
+        border-color: rgba(220, 222, 224, 1);
+
+        .el-tag__close {
+          color: rgba(220, 222, 224, 1);
+        }
+
+        .el-tag__close:hover {
+          cursor: not-allowed;
+          color: rgba(255, 255, 255, 1);
+          background-color: rgba(220, 222, 224, 1);
+        }
+      }
+
+      .el-tag+.el-tag {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .footer {
+    margin: 0 0 30px 150px;
+  }
+
+  .el-tag--danger {
+    border-color: red;
+    
+    .el-tag__close {
+      color: red;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+

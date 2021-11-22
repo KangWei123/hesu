@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>微信授权失败 - WakeData</title>
+    <meta
+      name="keywords"
+      content="珠海市卓轩科技有限公司,卓轩科技,WakeData,数据中台,大数据新零售,智慧门店,数字化门店,门店大屏,客流分析,客流画像,用户画像,门店投放,线下投放,会员分析,门店诊断,会员画像"
+    />
+    <meta
+      name="description"
+      content="WakeData致力于品牌进行线下数字化智慧门店赋能，基于线上线下数据深度打造客流洞察，客流画像，门店诊断，营销投放，会员分析等诸多功能，为品牌线下门店紧跟新零售时代潮流保驾护航。"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        background: #f0f2f7;
+        font-family: PingFangSC-Regular;
+      }
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: 20px auto 0px;
+        background-color: #ffffff;
+        border: solid 1px rgba(192, 192, 192, 0.3);
+        border-radius: 2px;
+        width: 629px;
+        height: 329px;
+      }
+      .title {
+        color: #ff9800;
+        text-align: center;
+        margin-top: 150px;
+      }
+      .desc {
+        color: #000;
+        text-align: center;
+        margin-top: 15px;
+        font-size: 12px;
+      }
+    </style>
+    <div class="container">
+      <div class="title">授权失败</div>
+      <div class="desc" id="err"></div>
+    </div>
+    <script>
+      (function () {
+        let code = location.search.split('?')[1].split('=')[1];
+        code = parseInt(code);
+        if (code == 1) {
+          code = '店铺已绑定其他帐号，请在绑定的店铺解绑';
+        } else if (code == 2) {
+          code = '该帐号已绑定其他店铺，请解绑之后再来绑定';
+        }
+        document.getElementById('err').innerText = code;
+      })();
+    </script>
+  </body>
+  <%= require('ejs-loader!@/dss-common/partial/key-bury/tpl.tpl')() %>
+</html>

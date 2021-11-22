@@ -1,0 +1,178 @@
+@import '../../../dss-common/style/wkt-constants.less';
+@header: 48px; //头部高度
+@scroll: 17px; //滚动条高度
+@footerHeight: 44px; //footer高度
+@titleHeight: 58px; //标题高度
+.wkt-sub-nav-container {
+  display: flex;
+  font-family: MicrosoftYaHei;
+  height: calc(100vh - @header-height);
+  background-color: @ui-background-color-secondary;
+
+  .wkt-breadcrumb-container {
+    padding: 4px 0 24px 0;
+  }
+
+  .sub-nav {
+    min-width: 90px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    overflow-y: auto;
+
+    & > div {
+      height: 40px;
+      text-align: start;
+      line-height: 40px;
+      font-size: 14px;
+      color: @light-black-color;
+      // margin: 0 auto 12px;
+      cursor: pointer;
+      box-sizing: border-box;
+      padding: 0 10px 0 16px;
+    }
+
+    & > .active {
+      color: #3879fb;
+      background: #edf4ff;
+    }
+    & > .disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .sub-nav-content-container {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+
+    .sub-nav-content {
+      position: relative;
+      margin: 20px 20px 0px 20px;
+      min-height: calc(100vh - @header-height - @footerHeight - 20px); //加上margin的值10px
+      // background-color: white;
+      box-sizing: border-box;
+
+      &.dark-nav-content {
+        padding-top: 0;
+      }
+
+      &.not-nav-content {
+        background-color: transparent !important;
+      }
+
+      .content-title {
+        height: 58px;
+        font-size: 16px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 500;
+        color: #303133;
+        line-height: 58px;
+        padding: 0 20px;
+        background: #fff;
+      }
+
+      .real-content {
+        // position: relative;
+        // overflow-x: auto;
+        //min-height: calc(100% - @titleHeight);
+        &.dark-bg {
+          background-color: rgba(242, 244, 247, 1);
+        }
+      }
+
+      .third-nav-item-container {
+        padding: 10px 0;
+        background-color: white;
+        border-radius: 4px 4px 0px 0px;
+        box-sizing: border-box;
+
+        .is-top {
+          border-bottom: 1px solid #e4e7ed;
+          margin-top: 10px;
+          padding-left: 20px;
+        }
+
+        .nav-wrap {
+          overflow: hidden;
+          margin-bottom: -1px;
+          position: relative;
+        }
+
+        .scroll {
+          overflow: hidden;
+        }
+
+        .nav {
+          border-bottom: none;
+          border-radius: 4px 4px 0 0;
+          box-sizing: border-box;
+        }
+
+        .item {
+          display: inline-block;
+          padding: 0px 20px;
+          box-sizing: border-box;
+          line-height: 40px;
+          border: 1px solid #e4e7ed;
+          border-bottom: none;
+          border-radius: 2px 2px 0px 0px;
+          background: #f5f7fa;
+          color: #717378;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        .item:hover {
+          color: @ui-theme-color-orange;
+        }
+
+        .item:not(:first-child) {
+          border-left: none;
+        }
+
+        .active {
+          font-weight: 500;
+          border-bottom: 1px solid #fff;
+          color: @ui-theme-color-orange;
+          background: #fff;
+        }
+      }
+    }
+
+    .sub-nav-footer {
+      height: 44px;
+      font-size: 12px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(168, 168, 168, 1);
+      line-height: 44px;
+      text-align: center;
+    }
+  }
+  .hasSubNav {
+    .sub-nav-content {
+      min-height: 100% !important;
+    }
+  }
+}
+.adapter-no-overflow {
+  height: calc(100vh - 10px) !important;
+}
+.scroll {
+  &.wkt-sub-nav-container {
+    height: calc(100vh - @header-height - @scroll);
+    .sub-nav-content-container {
+      height: calc(100vh - @header-height - @scroll);
+      .sub-nav-content {
+        min-height: calc(100vh - @header-height - @footerHeight - @scroll - 20px); //加上margin的值20px
+      }
+    }
+  }
+
+  &.adapter-no-overflow {
+    .sub-nav-content-container {
+      height: calc(100vh - 10px) !important;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="88px" height="30px" viewBox="0 0 88 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="0%" y1="44.1890496%" x2="100%" y2="57.0925965%" id="linearGradient-1">
+            <stop stop-color="#53565A" offset="0%"></stop>
+            <stop stop-color="#8C8E92" offset="63.2929751%"></stop>
+            <stop stop-color="#737681" offset="64.2084175%"></stop>
+            <stop stop-color="#87888D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F7F8F8" offset="0%"></stop>
+            <stop stop-color="#989EAA" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="2.99178107%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#D0D1D8" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-4" points="16.3492938 -2.55795385e-14 1.8 20.7 7.92164518 20.7 22.5 -2.55795385e-14"></polygon>
+        <filter x="-33.8%" y="-24.2%" width="167.6%" height="167.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-6" font-family="PingFangSC-Regular, PingFang SC" font-size="22" font-weight="normal" fill="#FFFFFF">
+            <tspan x="35" y="23">会员</tspan>
+        </text>
+        <filter x="-9.1%" y="-6.7%" width="118.2%" height="126.7%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g fill="url(#linearGradient-1)">
+        <path d="M16,0 L88,0 L88,0 L88,14 C88,22.836556 80.836556,30 72,30 L0,30 L0,30 L0,16 C-1.082166e-15,7.163444 7.163444,1.623249e-15 16,0 Z"></path>
+    </g>
+    <g transform="translate(12.000000, 5.000000)">
+        <path d="M0,1.88181818 L0,0 L8.1,0 L8.1,1.88181818 L6.85384615,1.88181818 L6.85384615,20.7 L1.24615385,20.7 L1.24615385,1.88181818 L0,1.88181818 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+        <g id="Path-2">
+            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+            <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+        </g>
+    </g>
+    <g fill="#FFFFFF" fill-opacity="1">
+        <use filter="url(#filter-7)" xlink:href="#text-6"></use>
+        <use xlink:href="#text-6"></use>
+    </g>
+</svg>

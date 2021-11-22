@@ -1,0 +1,138 @@
+.product-list {
+  padding: 20px 50px;
+
+  background: white;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Tahoma, Arial, SimSun, Heiti, sans - serif;
+
+  .goods-total {
+    margin-left: 14px;
+  }
+
+  .onshelf {
+    margin-left: 20px;
+  }
+
+  .downshelf {
+    margin-left: 10px;
+  }
+
+  .dss-list_table {
+    margin-top: 0px;
+    position: relative;
+    left: -16px;
+    overflow: inherit;
+
+    .el-table__body-wrapper {
+      background: rgba(255, 255, 255, 1);
+      border-radius: 4px;
+      border: 1px solid rgba(215, 224, 234, 1);
+      margin-top: 0px;
+    }
+
+    .el-table__row:hover > td {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    th.is-leaf, .el-table__body-wrapper tr:last-child td {
+      border-bottom: none;
+    }
+
+    thead th, thead.is-group th {
+      background: white;
+    }
+
+    .el-table__body-wrapper, .el-table__header-wrapper {
+      padding: 0 15px;
+    }
+
+    th > .cell {
+      color: #2C3641;
+      font-weight: 400;
+    }
+  }
+
+  .dss-list_table {
+    .el-table__header-wrapper {
+      .el-checkbox {
+        display: none;
+      }
+    }
+  }
+
+  .goods-img {
+    float: left;
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .goods-desc {
+    float: left;
+    font-size: 12px;
+    margin-left: 20px;
+    width: 250px;
+
+    span {
+      color: rgba(255, 86, 45, 1);
+    }
+  }
+
+  .goods-shlef {
+    .btn-state {
+      background: rgba(63, 202, 163, 0.33);
+      border-radius: 14px;
+      border: 1px solid rgba(58, 181, 147, 1);
+      color: #3AB593;
+      width: 78px;
+      padding: 0 10px;
+      animation: rotate-x 0.4s;
+    }
+  }
+
+  .goods-lower {
+    .btn-state {
+      background: rgba(48, 52, 59, 0.15);
+      border-radius: 14px;
+      border: 1px solid rgba(153, 153, 153, 1);
+      color: rgba(129, 129, 129, 1);
+      width: 78px;
+      padding: 0 10px;
+      animation: rotate-x 0.4s;
+    }
+  }
+
+  .goods-lower .goods-line, .goods-shlef .goods-line {
+    border-left: 1px solid rgba(186, 198, 211, 1);;
+    height: 26px;
+    display: inline-block;
+    margin: -8px 10px;
+  }
+
+  .goods-lower a, .goods-shlef a {
+    color: rgba(46, 141, 255, 1);
+    text-decoration: none
+  }
+
+  .goods-operation {
+    a {
+      color: rgba(46, 141, 255, 1);
+      text-decoration: none
+    }
+
+    a:first-child {
+      margin-right: 40px;
+    }
+  }
+
+}
+
+@keyframes rotate-x {
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

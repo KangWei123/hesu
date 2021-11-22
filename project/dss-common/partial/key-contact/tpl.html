@@ -1,0 +1,67 @@
+<div class="key-contact">
+  <div class="pc-contact">
+    <div class="contact-icon-box phone-box">
+      <i class="phone contact-icon">
+        <div class="phone-detail action-container">
+          <div class="phone-label">商务合作：</div>
+          <div class="phone-item">18688178866</div>
+          <div class="phone-item">wanle@wakedata.com</div>
+        </div>
+      </i>
+    </div>
+    <div class="contact-icon-box online-box online-title zhiCustomBtn">
+      <i class="online contact-icon"></i>
+    </div>
+    <div class="contact-icon-box qr-code-box">
+      <i class="qr-code contact-icon">
+        <img class="qr-code-img action-container" src="../../img/new-portal/common/QRCode-logo1.png" />
+      </i>
+    </div>
+  </div>
+  <div class="mobile-contact" id="mobileBox">
+    <a href="tel:18688178866" class="mobile-label">
+      <i class="contact-icon phone"></i>
+      <span>电话咨询</span>
+    </a>
+    <span class="zhiCustomBtn mobile-label">
+      <i class="contact-icon online"></i>
+      <span>在线客服</span>
+    </span>
+    <span class="mobile-del-icon-box" id="removeBtn">
+      <i class="del-icon"></i>
+    </span>
+  </div>
+</div>
+<script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=5a7b012302e64752a3b5258908d8f4f0"
+  class="zhiCustomBtn" id="zhichiScript" data-args="manual=true"></script>
+<script type="application/javascript">
+  (function() {
+    function removeMobileComponent() {
+      let mobileBox = document.getElementById('mobileBox');
+      mobileBox.style.display = 'none';
+    }
+
+    let removeBtn = document.getElementById('removeBtn');
+    if (removeBtn.addEventListener) {
+      //直接调用
+      removeBtn.addEventListener('click', removeMobileComponent);
+    } else if (removeBtn.attachEvent) {
+      removeBtn.attachEvent('onclick', removeMobileComponent);
+    } else {
+      //在addEventListener和attachEvent都不存在的情况下，用此代码
+      removeBtn.onclick = removeMobileComponent;
+    }
+
+    try {
+      //初始化智齿咨询组件实例
+      let zhiManager = getzhiSDKInstance();
+      //再调用load方法
+      zhiManager.on('load', function() {
+        zhiManager.initBtnDOM();
+      });
+      zhiManager.set('customBtn', 'true');
+    } catch (e) {
+      console.log('初始化智齿组件失败', e);
+    }
+  })();
+</script>

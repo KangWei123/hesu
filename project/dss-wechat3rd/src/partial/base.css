@@ -1,0 +1,197 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a img,
+fieldset {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #576b95;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/* button, */
+
+/* [type="button"], */
+
+/* [type="reset"], */
+
+/* [type="submit"], */
+
+/* input[type="search"]::-webkit-search-cancel-button, */
+
+/* input[type="search"]::-webkit-search-decoration { */
+
+/* -webkit-appearance: none; */
+
+/* background-color: transparent; */
+
+/* border-width: 0; */
+
+/* cursor: pointer; */
+
+/* } */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* 微信部分ui */
+
+.wx-btn-default {
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+  border-color: #e7e7eb;
+  color: #222;
+}
+
+.wx-btn-default:hover {
+  background-color: #e7e7eb;
+  background-image: -moz-linear-gradient(top, #e7e7eb 0, #e7e7eb 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e7e7eb), to(#e7e7eb));
+  background-image: -webkit-linear-gradient(top, #e7e7eb 0, #e7e7eb 100%);
+  background-image: -o-linear-gradient(top, #e7e7eb 0, #e7e7eb 100%);
+  background-image: linear-gradient(to bottom, #e7e7eb 0, #e7e7eb 100%);
+  border-color: #dadbe0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #222;
+}
+
+.wx-btn {
+  display: inline-block;
+  overflow: visible;
+  padding: 0 22px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: 14px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  min-width: 60px;
+}
+
+.wx-btn-primary {
+  background-color: #44b549;
+  background-image: -moz-linear-gradient(top, #44b549 0, #44b549 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#44b549), to(#44b549));
+  background-image: -webkit-linear-gradient(top, #44b549 0, #44b549 100%);
+  background-image: -o-linear-gradient(top, #44b549 0, #44b549 100%);
+  background-image: linear-gradient(to bottom, #44b549 0, #44b549 100%);
+  border-color: #44b549;
+  color: #fff;
+}
+
+.wx-btn-primary:hover {
+  background-color: #2f9833;
+  background-image: -moz-linear-gradient(top, #2f9833 0, #2f9833 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f9833), to(#2f9833));
+  background-image: -webkit-linear-gradient(top, #2f9833 0, #2f9833 100%);
+  background-image: -o-linear-gradient(top, #2f9833 0, #2f9833 100%);
+  background-image: linear-gradient(to bottom, #2f9833 0, #2f9833 100%);
+  border-color: #2f9833;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #fff;
+}
+
+.wx-btn-primary button {
+  color: #fff;
+}
+
+.wx-btn.wx-btn-input {
+  min-width: 104px;
+  padding: 0;
+}
+
+.wx-btn.wx-btn-input button {
+  width: 100%;
+}
+
+@-webkit-keyframes tapAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes tapAnimation {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

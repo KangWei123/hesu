@@ -1,0 +1,58 @@
+
+.text-nav-editor {
+
+
+  .nav-table{
+    position: relative;
+    background-color: #fff;
+    margin: 15px 10px 0 10px;
+    padding: 15px 10px;
+    border: 1px dashed #e5e5e5;
+  }
+
+  .nav-table:hover{
+    .com-close{display: inline-block}
+  }
+
+  .nav-row{
+    margin-bottom: 10px;
+  }
+
+  .nav-column{
+    display: inline-block;
+  }
+  .nav-column:first-child{
+    width: 72px;
+    text-align: center;
+  }
+
+  .com-close{
+    display: none;
+    position: absolute;
+    right:0;
+    top:0;
+  }
+
+  .dss-link{
+    display: flex;
+    align-items: center;
+  }
+
+  .link-page {
+    display: inline-block;
+    align-items: center;
+
+    .link-name {
+      display: inline-block;
+    }
+   
+    .delete {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      vertical-align: middle;
+      background: transparent url(../../images/close.png) no-repeat 0 0;background-size: cover;
+    }
+  }
+}

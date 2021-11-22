@@ -1,0 +1,268 @@
+.lucky-add {
+  background: white;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Tahoma, Arial, SimSun, Heiti, sans-serif;
+  margin-bottom: 30px;
+
+  .lucky-add-form {
+    padding: 20px;
+
+    .giftsList-button {
+      border-color: @ui-blue-default;
+      span {
+        color: @ui-blue-default;
+      }
+    }
+
+    .lucky-uploader{
+          width: 364px;
+          background-color: #FAFAFA;
+          align-items: center;
+          display: flex;
+
+          img{
+            width: 96px;
+            height: 96px;
+            float: left;
+          }
+
+          p{
+                padding-top: 50px;
+                padding-left: 15px;
+                line-height: normal;
+          }
+
+    }
+
+
+    .info-text{
+      display: inline;
+      color: red;
+    }
+    .long-input {
+      width: 400px;
+      .el-textarea__inner {
+        height: 180px !important;
+        background: transparent;
+      }
+    }
+    .textarea-span {
+      margin-left: -60px;
+      color: #A1A4AB;
+    }
+
+    // .flex-input-wrap {
+    //   display: flex;
+    // }
+
+    .shot-input {
+      width: 175px;
+      margin-right: 8px;
+    }
+
+    .lucky-goods-box {
+      margin-top: 20px;
+      max-height: 500px;
+      width: 500px;
+      overflow: auto;
+      .el-table {
+        margin-top: 0;
+      }
+    }
+
+    .store-list-box {
+      margin-bottom: 20px;
+      width: 800px;
+
+      .store-label {
+        height: 30px;
+        line-height: 30px;
+        background: rgba(245, 245, 245, 1);
+        padding-left: 23px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(51, 51, 51, 1);
+      }
+
+      .store-content {
+        max-height: 303px;
+        border: 1px solid rgba(235, 235, 235, 1);
+        padding: 14px 23px;
+        overflow: auto;
+
+        .store-item-box {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 50px;
+        }
+
+        .el-tag + .el-tag {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .lucky-form {
+    padding: 20px 20px 0;
+    overflow: hidden;
+
+    .lucky-type-label {
+      img {
+        width: 60px;
+        height: 40px;
+        background: rgb(240, 85, 108);
+        vertical-align: middle;
+      }
+      .el-checkbox + .el-checkbox {
+        margin-left: 15px;
+      }
+      .el-checkbox {
+        margin-left: 20px;
+      }
+    }
+    .lucky-time {
+      .el-form-item {
+        display: inline-block;
+      }
+    }
+    .lucky-cancel {
+      margin-left: 30px;
+    }
+    .lucky-label {
+      margin-bottom: 20px;
+
+      .notes {
+        font-size: 12px;
+        color: @light-black-color;
+        line-height: 25px;
+      }
+      .red {
+        color: @red-color;
+      }
+      .lucky-w366 {
+        width: 366px;
+      }
+      .lucky-w157 {
+        width: 157px;
+      }
+      .left10 {
+        margin-left: 10px;
+      }
+      .lucky-picker {
+        margin-left: 10px;
+      }
+      .lucky-day {
+        width: 90px;
+        margin-left: 12px;
+      }
+      .lucky-unit {
+        margin-left: 10px;
+      }
+
+      .lucky-describe {
+        width: 366px;
+        height: 202px;
+
+        .el-textarea__inner {
+          resize: none;
+        }
+      }
+
+    }
+
+    .lucky-hr {
+      border: 0.5px dashed rgba(186, 198, 211, 1);
+    }
+
+    .lucky-radio {
+      overflow: hidden;
+      width: 150px;
+      .el-radio + .el-radio {
+        margin-left: 0px;
+      }
+      .el-radio {
+        line-height: 40px;
+      }
+    }
+    .lucky-box {
+      .lucky-image-choose-container {
+        width: 366px;
+        display: inline-block;
+        margin-right: 60px;
+      }
+
+      .img-notes {
+        font-size: 12px;
+        color: rgba(133, 140, 153, 1);
+      }
+
+      .lucky-default-img-container {
+        display: inline-block;
+        position: relative;
+        width: 300px;
+        height: 173px;
+        .lucky-default-img {
+          width: 300px;
+          height: 173px;
+          position: absolute;
+        }
+        .lucky-desc {
+          width: 300px;
+          height: 173px;
+          position: absolute;
+          box-sizing: border-box;
+          background: rgba(0, 0, 0, 0);
+          padding: 18px 23px;
+
+          .lucky-name {
+            height: 25px;
+            font-size: 18px;
+            font-family: PingFangSC-Semibold;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 1);
+            line-height: 25px;
+          }
+
+          .lucky-content {
+            height: 17px;
+            font-size: 12px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            line-height: 17px;
+            position: absolute;
+            bottom: 18px;
+          }
+
+          .lucky-content-inner {
+            width: 300px;
+            position: relative;
+          }
+          .validity {
+            display: inline-block;
+          }
+
+          .lucky-type {
+            position: absolute;
+            display: inline-block;
+            right: 35px;
+          }
+
+        }
+      }
+
+      .disable {
+        pointer-events: none;
+      }
+    }
+    .dss-pagination.el-pagination {
+      text-align: left;
+    }
+    .primary-inputHeight {
+      .el-input__inner {
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+}

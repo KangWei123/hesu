@@ -1,0 +1,78 @@
+@import './base.less';
+
+@font-face {
+  font-family: 'DIN-Medium';
+  src: url('../../../asserts/font/DIN-Medium.otf') format("truetype");
+}
+
+.number {
+  font-family: 'DIN-Medium';
+}
+
+.vuelist-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.vuelist-enter-active,
+.vuelist-leave-active {
+  transition: all 1s;
+}
+.vuelist-enter, .vuelist-leave-to /* .list-leave-active 在低于 2.1.8 版本中 */ {
+  opacity: 0;
+  transform: translateY(-0.5rem);
+}
+
+.top-right-shadow-box {
+  box-shadow: -6px 6px 15px 1px @shadow-blue inset;
+}
+// 带内阴影的容器
+.blue-shadow-box {
+  box-shadow: 1px 1px 20px 6px #273AA7 inset;;
+  border-radius: 8px;
+}
+// 标题
+.box-title {
+  width: 100%;
+  line-height: 18px;
+  padding: 13px 0 12px 19px;
+  box-shadow: 1px 1px 20px 6px #273AA7 inset;
+  color: #FFFFFF;
+  font-size: 18px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+// 渐变背景
+.gradual-bg {
+  background: linear-gradient(110deg, #586AEF -40%, #1A1E37 80%);
+}
+// 记录列表的记录项
+.record-item {
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: @font-blue;
+  padding: 0 8px 0 28px;
+  margin: 0 2px;
+}
+.record-item:nth-child(odd) {
+  background: @list-light-blue;
+}
+.record-item:nth-child(even) {
+  background: @list-dark-blue;
+}
+// 暂无数据
+.no-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+}
+// 隐藏超出的字体
+.hidden-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

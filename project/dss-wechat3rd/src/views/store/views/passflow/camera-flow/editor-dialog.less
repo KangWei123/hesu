@@ -1,0 +1,184 @@
+
+.editor-dialog{
+    .el-dialog{
+    border-radius:4px;
+    }
+    .el-dialog__header {
+        padding: 19px 20px 10px;
+    }
+    .el-dialog__title {
+        line-height: 24px;
+        font-size: 16px;
+        color: @ui-font-color-black;
+    }
+    .el-dialog__body {
+        padding: 15px 0px 5px 0px;
+        color: #606266;
+        font-size: 14px;
+    }
+    .face-box{
+      padding: 0  0 20px;
+      .head-box{
+        margin-top:10px;
+        .head-img{
+          margin-top:20px;
+          width: 84px;
+          height: 84px;
+        }
+        .left-box{
+          text-align: center;
+          .img-title{
+              font-size:12px;
+              margin-top: 5px;
+              color:rgba(153,153,153,1);
+          }
+        }
+        .tips{
+          margin-top:30px;
+          font-size:12px;
+          color:rgba(153,153,153,1);
+          text-align: center;
+        }
+        .tips1{
+          margin-top:5px;
+          font-size:12px;
+          color:red;
+          text-align: center;
+        }
+        .btn-box{
+            text-align: center;
+            margin-top: 60px;
+            .dss-btn-primary{
+              width:120px;
+            }
+        }
+        .selected.border{
+          border:2px solid rgba(56,121,251,1);
+          box-sizing: border-box;
+
+         .bottom-box{
+            display: block;
+          }
+        }
+
+        .border{
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          display: inline-block;
+          width:267px;
+          min-height:339px;
+          box-shadow:0px 4px 8px 0px rgba(0,0,0,0.08);
+          box-sizing: border-box;
+          border:2px solid #ffffff;
+          .bottom-box{
+            position: absolute;
+            width:100%;
+            height:26px;
+            line-height: 26px;
+            background: rgba(56,121,251,1);
+            bottom: 0;
+            display: none
+          }
+          .bottom-icon{
+            width:16px;
+            height:16px;
+            vertical-align: middle;
+          }
+        }
+        .border:hover{
+          border:2px solid rgba(56,121,251,1);
+          box-sizing: border-box;
+        }
+        .border:hover .bottom-box{
+          display: block;
+        }
+        .right-box{
+            text-align: center;
+            margin-left: 20px;
+        }
+        .user-info{
+          margin:10px 0 26px 0;
+          padding: 0 30px;
+          text-align: left;
+          .user-item{
+            overflow: hidden;
+            padding: 5px 0;
+            .user-label{
+               float: left;
+            }
+            .user-text{
+               float: left;
+            }
+          }
+
+        }
+    }
+    }
+    .member-form{
+        width:100%;
+        padding-top: 0px;
+        font-size: 12px;
+      .waring{
+          font-size:10px;
+          font-family:MicrosoftYaHei;
+          color:red;
+          position: absolute;
+          top:30px;
+          left: -141px;
+        }
+       .el-form-item__label{
+          font-size: 12px;
+        }
+        .el-textarea{
+          font-size: 12px;
+        }
+      .form-item{
+        overflow: hidden;
+        padding: 0;
+        .el-form-item {
+          padding: 0;
+          float: left;
+        }
+      .el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before{
+         content: '';
+         margin-right: 0px;
+        }
+        .el-form-item+.el-form-item{
+        margin-left: 20px;
+        }
+      }
+        .el-form-item {
+          padding: 0;
+          margin-bottom: 18px;
+        }
+
+        .el-select {
+          display:block;
+        }
+        .remark{
+          .el-form-item__content{
+            margin-left: 0 !important;
+          }
+        }
+        .memberType{
+          .el-form-item__label{
+          width: 84px !important;
+          }
+          .el-form-item__content{
+            margin-left: 84px !important;
+          }
+        }
+      .employeeType{
+      }
+      .dss-btn-middle{
+        text-align: center;
+        .dss-btn-primary{
+          width:120px;
+        }
+        .el-form-item__content{
+          margin: 0 !important;
+        }
+      }
+    }
+}

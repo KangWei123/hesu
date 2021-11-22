@@ -1,0 +1,141 @@
+.type-popper {
+  margin-left: -74px;
+}
+
+.time-popper {
+  margin-left: -148px;
+}
+
+.size-popper {
+  margin-left: -222px;
+}
+
+.el-popover {
+  border-radius: 4px;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.05);
+  border: none;
+  padding: 16px 24px;
+  box-sizing: border-box;
+
+  .el-input__inner {
+    height: 36px;
+    border: 1px solid #dce1e6;
+
+    .el-input__icon {
+      line-height: 1;
+    }
+  }
+
+  .el-checkbox__inner {
+    border: 1px solid #999;
+    border-radius: 1px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+  }
+
+  .el-checkbox__inner::after {
+    border: 1px solid #fff;
+    border-left: none;
+    border-top: none;
+    height: 8px;
+    left: 4px;
+    position: absolute;
+    top: 1px;
+    width: 4px;
+  }
+
+  .tag-title {
+    margin-top: 16px;
+    font-size: 16px;
+    color: #303133;
+    line-height: 22px;
+
+    i {
+      font-size: 18px;
+      color: #717378;
+      cursor: pointer;
+    }
+  }
+
+  .tag-box {
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .tag-item {
+      position: relative;
+      cursor: pointer;
+      margin-top: 16px;
+      margin-right: 16px;
+      line-height: 26px;
+      font-size: 14px;
+      color: #717378;
+      padding: 0 13px;
+      box-sizing: border-box;
+      border: 1px solid #ebeef5;
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    .el-icon-check {
+      padding: 0 6px 0 20px;
+      background: #1890ff;
+      border: 1px solid #1890ff;
+      color: #fff;
+
+      &::before {
+        position: absolute;
+        left: 3px;
+        top: 8px;
+        line-height: normal;
+      }
+    }
+  }
+
+  .filter-title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #303133;
+    line-height: 22px;
+  }
+
+  .filter-input-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .line {
+      width: 20px;
+      height: 2px;
+      background: #ebeef5;
+      margin: 0 10px;
+    }
+
+    .el-input__inner {
+      width: 140px;
+      height: 36px;
+    }
+  }
+
+  .filter-type-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #303133;
+    margin-top: 16px;
+
+    .tip {
+      font-size: 14px;
+      color: #a1a4ab;
+    }
+  }
+
+  .filter-type-box:first-child {
+    margin-top: 0;
+  }
+}

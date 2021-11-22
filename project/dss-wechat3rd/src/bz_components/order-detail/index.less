@@ -1,0 +1,564 @@
+.order-detail-container {
+  .wkt-breadcrumb-container {
+    background: #fff;
+    border-bottom: none;
+  }
+
+  .overflow-wrap {
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+
+  .order-info__item {
+    position: relative;
+    width: 390px;
+    height: 200px;
+    padding: 18px 24px;
+    margin-right: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06); 
+    background: #ffffff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #fa7516;
+      border-radius: 2px;
+    }
+
+    .order-info-label {
+      margin-bottom: 6px !important;
+    }
+  }
+
+  .order-info-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  .order-info__title {
+    font-size: 16px;
+    font-family: PingFangSC, PingFangSC-Medium;
+    font-weight: 500;
+    color: #303133;
+    line-height: 22px;
+    margin-bottom: 14px;
+  }
+
+  .order-info {
+    box-sizing: border-box;
+    padding: 18px 24px;
+    min-height: 165px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    margin-top: 20px;
+    color: #303133;
+    font-size: 14px;
+    line-height: 19px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06);
+
+    .order-info-label {
+      display: flex;
+      margin-bottom: 4px;
+
+      span:first-child {
+        display: inline-block;
+        color: #717378;
+      }
+
+      .label-desc {
+        flex: 1;
+        text-align: left;
+        padding-right: 10px;
+        word-break: break-all;
+      }
+
+      .pre-sell {
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .order-type {
+        color: rgba(55, 190, 143, 1);
+      }
+
+      .delivery-time {
+        margin-left: 20px;
+      }
+
+      .remain-time {
+        margin-left: 20px;
+      }
+    }
+
+    .order-info-address {
+      box-sizing: border-box;
+      padding: 20px;
+      min-height: 109px;
+      background: rgba(233, 236, 241, 1);
+      margin-bottom: 10px;
+
+      .order-info-label:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    .order-info-user {
+      margin-top: 20px;
+
+      .order-info-label {
+        display: inline-block;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .member-info {
+    margin-top: 20px;
+  }
+
+  .member-content {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+
+    .member-content__item {
+      margin-left: 32px;
+    }
+
+    .member-info-label {
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      color: #303133;
+      line-height: 20px;
+
+      span {
+        color: #717378;
+      }
+    }
+
+    .member-default-avatar {
+      width: 72px;
+      height: 72px;
+      line-height: 72px;
+      text-align: center;
+      border-radius: 50%;
+      color: #BBC9DA;
+      font-size: 16px;
+      font-weight: 500;
+      background: #EAEFF5;
+    }
+    
+    .icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 72px;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  .order-content {
+    margin-top: 10px;
+
+    .order-content-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .goods-info-head {
+      font-size: 14px;
+      font-family: PingFangSC, PingFangSC-Medium;
+      font-weight: 500;
+      color: #303133;
+      line-height: 22px;
+    }
+
+    .goods-info {
+      background: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06); 
+
+      .goods-info-content {
+        border-bottom: 1px solid #ebeef5;
+        // border-left: 1px solid rgba(220, 221, 224, 1);
+        // border-right: 1px solid rgba(220, 221, 224, 1);
+        display: flex;
+        padding: 10px 24px;
+      }
+
+      .goods-info-content:last-child {
+        border-bottom: 0;
+      }
+
+      .goods-info-desc {
+
+        .goods-info-desc-content {
+          display: inline-block;
+          margin-left: 20px;
+          padding-right: 20px;
+          vertical-align: middle;
+
+          span {
+            display: block;
+          }
+        }
+      }
+
+      .desc {
+        flex: 5;
+        display: flex;
+        text-align: left;
+      }
+
+      .money {
+        flex: 2;
+        text-align: left;
+      }
+
+      .receipt {
+        flex: 2;
+        text-align: left;
+      }
+
+      .pay {
+        flex: 2;
+        text-align: left;
+      }
+
+      .out-box {
+        span {
+          display: block;
+        }
+
+        .inner-box {
+          display: inline-block;
+          // margin-left: 20px;
+          text-align: start;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .contract-info-content {
+      margin-top: 10px;
+
+      span {
+        color: #3879FB;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+
+    .invoice-info {
+      background: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06); 
+      margin-top: 40px; 
+      padding: 10px 24px;
+
+      .invoice-content-head {
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 500;
+        color: #303133;
+        line-height: 22px;
+      }
+
+      .invoice-content {
+        border-bottom: 1px solid #ebeef5;
+        // border-left: 1px solid rgba(220, 221, 224, 1);
+        // border-right: 1px solid rgba(220, 221, 224, 1);
+        display: flex;
+      }
+
+      .invoice-content:last-child {
+        border-bottom: 0;
+      }
+
+      .invoice-goods-tab {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        &.flex-2 {
+          flex: 2;
+        }
+      }
+
+      // .invoice-goods-tab:first-child {
+      //   border-right: 1px solid rgba(220, 221, 224, 1);
+      // }
+
+      .invoice-goods-info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 8px;
+        // border-top: 1px solid rgba(220, 221, 224, 1);
+        // padding: 10px 20px;
+      }
+
+      .invoice-goods-info:first-child {
+        border-top: none;
+      }
+
+      .goods-info-desc {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 8px;
+
+        .salePrice {
+          margin-right: 20px;
+        }
+      }
+
+      .logistics-goods-info {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .logistics-info {
+        display: inline-block;
+        // padding: 10px 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .btn-box {
+        display: inline-block;
+        // position: relative;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+      }
+    }
+
+    .waterBill-info {
+      border-radius: 4px;
+      background: #ffffff;
+      box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06); 
+      margin-top: 20px;
+
+      .wkt-table {
+        border-radius: 4px;
+        padding-top: 0;
+        box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06);
+      }
+
+      .el-row-th {
+        background-color: rgba(245, 245, 245, 1);
+        padding: 5px 20px;
+      }
+
+      .el-row-td {
+        border: 1px solid rgba(220, 221, 224, 1);
+        padding: 5px 20px;
+      }
+
+      .el-col {
+        padding-left: 5px;
+        word-wrap: break-word;
+
+      }
+
+      .el-col:first-child {
+        padding-left: 0px;
+      }
+
+
+      th.is-leaf {
+        border-top: 0;
+      }
+    }
+
+    .goods-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+  }
+
+  .return_and_exchange_records {
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06); 
+    margin-top: 20px;
+    padding: 18px 24px;
+    font-size: 12px;
+
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .record_content {
+      border: 1px solid rgba(220, 221, 224, 1);
+
+      .tab:first-child {
+        border-top: none;
+      }
+
+      .tab {
+        border-top: 1px solid rgba(220, 221, 224, 1);
+        display: flex;
+
+        .el-col {
+          padding: 10px 20px;
+        }
+
+        .tab_info {
+          flex: 1;
+
+          .return_info {
+            display: inline-block;
+            margin-right: 10px;
+          }
+        }
+
+        .desc {
+          display: flex;
+
+          .desc_text {
+            flex: 1;
+            margin-left: 0px;
+          }
+        }
+
+        .logistics,
+        .status {
+          span {
+            display: block;
+            margin-left: 0px;
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .goods-image-box {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+
+      .goods-image-box:last-child {
+        margin-right: 0px;
+      }
+
+      .goods-image {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+      }
+
+      .btn_box {
+        display: inline-block;
+
+        .btn {
+          display: block;
+          margin: 0px;
+          padding: 5px;
+        }
+
+        .btn-blue {
+          color: rgba(46, 141, 255, 1);
+        }
+
+        .btn-warning {
+          color: rgba(251, 73, 56, 1);
+        }
+      }
+    }
+  }
+
+  .enlarge_image_dialog {
+    .el-dialog__body {
+      text-align: center;
+    }
+  }
+
+  // 修改收货地址dialog
+  .update-address-dealog {
+    .address-info-input {
+      width: 300px;
+    }
+
+    .el-cascader {
+      width: 300px;
+    }
+
+    .tips {
+      color: #d3d3d3;
+    }
+  }
+
+  // 处方信息
+  .prescription-info{
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.06); 
+    border: 1px solid #dcdde0;
+    margin-top: 24px;
+    padding-bottom: 30px;
+    
+    .prescription-info-title{
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      padding: 5px 0 0 10px;
+    }
+    .prescription-content{
+      display: flex;
+      padding-left: 10px;
+      align-items: center;
+      .detail-btn{
+        margin-left: 10px;
+        color: #3879FB;
+      }
+      .status{
+        margin: 0 10px;
+      }
+      .green-txt{
+        color: #43c503;
+      }
+      .wran-text{
+        color: rgba(243, 54, 54, 0.68);
+      }
+    }
+  }
+  .line-vertical{
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    margin: 0 8px;
+    vertical-align: middle;
+    position: relative;
+    background-color: #dcdfe6;
+  }
+}
+
+.href-disable{
+  cursor: not-allowed;
+  color: #ccc !important;
+}

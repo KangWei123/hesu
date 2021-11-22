@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video-container {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="video-container">
+    <video class="video" width="100%" height="100%" src="" controls="controls"></video>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      var iframe = getSelfIframe();
+      /* 获得当前公式所在的iframe节点 */
+      function getSelfIframe() {
+        var iframes = parent.document.getElementsByTagName('iframe');
+        for (var key in iframes) {
+          if (iframes[key].contentWindow == window) {
+            return iframes[key];
+          }
+        }
+        return null;
+      }
+
+      function getUrl() {
+        return iframe.getAttribute('data-url') || ''
+      }
+      var url = getUrl();
+      document.getElementsByClassName('video')[0].src = url;
+    })
+
+  </script>
+</body>
+
+</html>

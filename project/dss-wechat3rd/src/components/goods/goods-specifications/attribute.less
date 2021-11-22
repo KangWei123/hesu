@@ -1,0 +1,150 @@
+.goods-attribute {
+  margin-bottom: 10px;
+
+  .attr-select-container {
+    position: relative;
+    line-height: 24px;
+
+    .check-add-image {
+      .el-checkbox__label {
+        color: #858c99;
+      }
+    }
+
+    .del-attr-btn {
+      visibility: hidden;
+      text-align: center;
+      position: absolute;
+      line-height: 16px;
+      right: 0;
+      top: 50%;
+      margin-top: -8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      cursor: pointer;
+      background: url('../../../images/goods/icon-del.png') no-repeat;
+    }
+  }
+
+  .attr-select-container:hover {
+    .del-attr-btn {
+      visibility: visible;
+    }
+  }
+
+  .attr-val {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+
+    .attr-val-tag {
+      display: block;
+    }
+
+    .attr-val-image {
+      display: inline-block;
+      width: 86px;
+      height: 62px;
+      margin-top: 10px;
+      background: #0c986b;
+    }
+  }
+
+  .attr-item-container {
+    margin-top: 10px;
+
+    //font-size: 0;
+    .el-tag {
+      height: 24px;
+      line-height: 24px;
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(215, 224, 234, 1);
+      font-size: 12px;
+      font-family: MicrosoftYaHei;
+      color: rgba(86, 105, 128, 1);
+
+      .el-icon-close {
+        color: rgba(86, 105, 128, 1);
+      }
+    }
+
+    .add-attr-image-tip {
+      width: 465px;
+      height: 38px;
+      font-size: 12px;
+      font-family: MicrosoftYaHei;
+      color: rgba(133, 140, 153, 1);
+      line-height: 16px;
+      margin-top: 10px;
+    }
+
+    .align-top {
+      vertical-align: top;
+    }
+  }
+
+  .goods-w177 {
+    width: 177px;
+  }
+
+  .primary-attr-select {
+    width: 135px;
+  }
+
+  .show-type-container {
+    margin: 10px 0;
+  }
+}
+
+.attr-explanation-popper {
+  .minapp-explain {
+    display: flex;
+    font-size: 12px;
+
+    .minapp-explain-item {
+      width: 60px;
+      position: relative;
+      margin: 20px 10px 0 0;
+
+      .cover {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 6px 0;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .tips {
+        position: absolute;
+        top: -22px;
+        left: 30px;
+        padding: 0 4px;
+        height: 20px;
+        line-height: 20px;
+        min-width: 100px;
+        border: 1px solid #d7e0ea;
+        // overflow: hidden;
+
+        &::after {
+          display: inline-block;
+          content: " ";
+          height: 4px;
+          width: 4px;
+          border-width: 0 1px 1px 0;
+          border-color: #d7e0ea;
+          background: #fff;
+          border-style: solid;
+          transform: rotate(45deg);
+          position: absolute;
+          bottom: -4px;
+          left: 1px;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+}

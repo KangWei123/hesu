@@ -1,0 +1,242 @@
+.passenger-flow-main {
+  // padding: 20px;
+
+  .statistics-container {
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .common-title {
+    display: flex;
+    line-height: 34px;
+    margin-bottom: 10px;
+
+    > span {
+      color: #3b4757;
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+  }
+
+  .report-title {
+    height: 32px;
+    line-height: 32px;
+
+    .title {
+      display: inline-block;
+      color: #3b4757;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .right-frame {
+      float: right;
+    }
+  }
+
+  .key-icon.key-icon-btn {
+    background-position: center;
+  }
+
+  .key-icon-add, .key-icon-subtract {
+    padding-top: 6px;
+  }
+
+  // 用户概览
+  .customer-user {
+    margin-top: 30px;
+  }
+
+  // 客流量分析
+  .customer-analyse {
+    margin-top: 30px;
+    .analyse-chart {
+      min-height: 200px;
+      position: relative;
+    }
+
+    .passenger-table {
+      box-sizing: border-box;
+      height: ~'calc(100% - 32px)';
+    }
+  }
+
+  // 客流量时段对比
+  .customer-compare {
+    margin-top: 20px;
+    .card-title {
+      margin-bottom: 0;
+    }
+
+    .compare-editor {
+      height: 32px;
+      line-height: 32px;
+      padding: 20px 0;
+      color: #3b4757;
+      font-size: 14px;
+      font-weight: 600;
+
+      > span {
+        display: flex;
+        cursor: pointer;
+        width: 150px;
+      }
+
+      .icon-editor {
+        margin-right: 10px;
+      }
+    }
+
+    .editor-form {
+      padding: 0 40px;
+
+      .time-form {
+        padding: 10px 0;
+        margin-bottom: 20px;
+        border-top: 1px solid rgba(151, 151, 151, .2);
+        border-bottom: 1px solid rgba(151, 151, 151, .2);
+
+        .time-form-item {
+          padding: 10px 0;
+          display: flex;
+          height: 40px;
+          line-height: 40px;
+          color: #3b4757;
+          font-size: 14px;
+          font-weight: 600;
+
+          .icon.icon-btn {
+            padding-top: 6px;
+            margin-right: 20px;
+          }
+
+          .el-date-editor.el-input {
+            margin: 0 20px;
+            width: 146px;
+
+            .el-input__inner {
+              text-align: center;
+            }
+          }
+
+          &.add-time {
+            > span {
+              display: flex;
+              width: 120px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .compare-view {
+      position: relative;
+      min-height: 200px;
+
+      .time-compare {
+        display: flex;
+        flex-direction: row;
+        padding-left: 8px;
+        margin-bottom: 10px;
+        overflow: auto;
+
+        .time-compare-item {
+          //height: 32px;
+          line-height: 32px;
+          color: #3b4757;
+          font-size: 14px;
+          font-weight: 400;
+          display: flex;
+          //min-width: 180px;
+
+          .icon-time {
+            width: 18px;
+            height: 20px;
+            margin-right: 14px;
+          }
+
+          .text {
+            opacity: 0.5;
+            margin: 0 40px;
+          }
+
+          &:last-child {
+            .text {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .compare-view-chart {
+        height: 400px;
+        position: relative;
+      }
+    }
+  }
+
+  .key-pagination.el-pagination {
+    text-align: center;
+  }
+
+  .none-data {
+    display: flex;
+    // justify-content: center;
+    opacity: 0.5;
+    line-height: 32px;
+    color: #3b4757;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+  }
+
+  .detail-button {
+    cursor: pointer;
+    width: 40px;
+  }
+
+  .customer-tag {
+    margin-top: 20px;
+  }
+}
+
+.tag-table-detail {
+  .detail-title {
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .detail-content {
+    border-top: 1px solid rgba(57, 57, 58, .1);
+    border-bottom: 1px solid rgba(57, 57, 58, .1);
+
+    .detail-content-item {
+      display: flex;
+      text-align: center;
+
+      > div {
+        flex: 1;
+        min-height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .detail-content-item-th {
+        font-weight: 600;
+        border-right: 1px solid rgba(57, 57, 58, .1);
+      }
+
+      &:nth-child(odd) {
+        background-color: #f8f9fb;
+      }
+    }
+  }
+}
+

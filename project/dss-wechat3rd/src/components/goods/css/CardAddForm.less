@@ -1,0 +1,164 @@
+.card-add {
+  background: white;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Tahoma, Arial, SimSun, Heiti, sans-serif;
+
+  .card-service-box {
+    width: 580px;
+    max-height:500px;
+    overflow: auto;
+    .el-table {
+      margin-top: 0;
+    }
+  }
+  .el-radio {
+    vertical-align: middle;
+  }
+
+  .img-radio {
+    margin-left: 14px;
+    margin-right: 16px;
+  }
+  .card-form {
+    padding: 15px 30px;
+    padding-bottom: 40px;
+    //.el-form-item__content {
+    //  margin-left: 91px;
+    //}
+    .card-type-label {
+      img {
+        width: 60px;
+        height: 40px;
+        background: rgb(240, 85, 108);
+        vertical-align: middle;
+      }
+      .el-checkbox + .el-checkbox {
+        margin-left: 15px;
+      }
+      .el-checkbox {
+        margin-left: 20px;
+      }
+    }
+
+    .card-label {
+      .notes {
+        font-size: 12px;
+        color: #858c99;
+      }
+      .card-w366 {
+        width: 366px;
+      }
+      .card-w157 {
+        width: 157px;
+      }
+      .card-day {
+        width: 90px;
+        margin-left: 12px;
+      }
+      .card-unit {
+        margin-left: 10px;
+      }
+
+      .card-describe {
+        width: 366px;
+        height: 202px;
+
+        .el-textarea__inner {
+          resize: none;
+        }
+      }
+
+    }
+
+    .card-hr {
+      border: 0.5px dashed rgba(186, 198, 211, 1);
+    }
+
+    .card-radio {
+      overflow: hidden;
+      width: 150px;
+      .el-radio + .el-radio {
+        margin-left: 0px;
+      }
+      .el-radio{
+       line-height: 40px;
+      }
+    }
+    .card-box {
+      .card-image-choose-container {
+        width: 366px;
+        display: inline-block;
+        margin-right: 60px;
+      }
+
+      .img-notes {
+        font-size: 12px;
+        color: rgba(133, 140, 153, 1);
+      }
+
+      .card-default-img-container {
+        display: inline-block;
+        position: relative;
+        width: 300px;
+        height: 173px;
+        .card-default-img {
+          width: 300px;
+          height: 173px;
+          position: absolute;
+        }
+        .card-desc {
+          width: 300px;
+          height: 173px;
+          position: absolute;
+          box-sizing: border-box;
+          background: rgba(0, 0, 0, 0);
+          padding: 18px 23px;
+
+          .card-name {
+            height:25px;
+            font-size:18px;
+            font-family:PingFangSC-Semibold;
+            font-weight:600;
+            color:rgba(255,255,255,1);
+            line-height:25px;
+          }
+
+          .card-content {
+            height:17px;
+            font-size:12px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(255,255,255,1);
+            line-height:17px;
+            position: absolute;
+            bottom: 18px;
+          }
+
+          .card-content-inner {
+            width: 300px;
+            position: relative;
+          }
+          .validity {
+            display: inline-block;
+          }
+
+          .card-type {
+            position: absolute;
+            display: inline-block;
+            right: 35px;
+          }
+
+        }
+      }
+
+      .disable {
+        pointer-events: none;
+      }
+    }
+
+    .primary-inputHeight {
+      .el-input__inner {
+        height: 30px;
+      }
+    }
+  }
+}

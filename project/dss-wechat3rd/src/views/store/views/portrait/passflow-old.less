@@ -1,0 +1,233 @@
+
+.dss_portrait {
+  /*overflow-x: hidden;*/
+  min-width: 980px;
+}
+
+.dss_portrait_mt {
+  margin-top: 30px;
+}
+
+.dss_portrait_min {
+  min-width: 980px;
+}
+
+.dss_portrait_push {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  opacity: 0.8;
+}
+
+.dss_portrait_push:hover {
+  opacity: 1;
+}
+
+.dss_portrait_title {
+  opacity: 0.8;
+  font-size: 18px;
+  color: #012334;
+  margin: 0;
+}
+
+.dss_portrait_desc {
+  margin: 2px 0 0;
+  opacity: 0.5;
+  font-size: 12px;
+  color: #012334;
+  display: none;
+}
+
+.dss_portrait_sex {
+  display: block;
+  margin: 26px 0 0;
+}
+
+.dss_portrait_sex dt {
+  float: left;
+}
+
+.dss_portrait_sex dt img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.dss_portrait_sex dd {
+  text-align: right;
+  height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3499FE;
+  margin-bottom: 50px;
+}
+
+.dss_portrait_tab {
+  text-align: center
+}
+
+.dss_portrait_tab .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  color: #fff;
+  background-color: #3499FE;
+  border-color: #3499FE;
+  -webkit-box-shadow: -1px 0 0 0 #3499FE;
+  box-shadow: -1px 0 0 0 #3499FE;
+}
+
+.dss_portrait_tab .el-radio-button:first-child .el-radio-button__inner {
+  border-left: 1px solid rgba(151, 151, 151, 0.60);
+  border-radius: 16px 0 0 16px;
+}
+
+.dss_portrait_tab .el-radio-button:last-child .el-radio-button__inner {
+  border-radius: 0 16px 16px 0;
+}
+
+.dss_portrait_tab .el-radio-button__inner {
+  border: 1px solid rgba(151, 151, 151, 0.60);
+  padding: 8px 25px;
+  border-left: 0;
+}
+
+.dss_portrait_jobs {
+  text-align: center;
+  padding: 40px 0px 20px 0px;
+}
+
+.dss_portrait_jobs .dss_chart_pie {
+  margin: 10px;
+}
+
+.dss_portrait .el-card {
+  min-height: 310px;
+  box-sizing: border-box;
+}
+
+.dss_portrait_action {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.dss_portrait_action dl {
+  margin: 0;
+  overflow: hidden;
+}
+
+.dss_portrait_action dt {
+  font-size: 12px;
+  float: left;
+  color: #3B4757;
+  text-align: right;
+  min-width: 60px;
+}
+
+.dss_portrait_action dd {
+  margin-bottom: 24px;
+  margin-left: 80px;
+}
+
+.dss_portrait_action ul {
+  margin: 0 0 0 80px;
+  position: absolute;
+  width: calc(100% - 80px);
+  list-style: none;
+  padding: 0;
+}
+
+.dss_portrait_action ul li {
+  float: left;
+  width: 25%;
+}
+
+.dss_portrait_people {
+  margin-top: 30px;
+  padding-left: 10px;
+  text-align: right;
+}
+
+.dss_portrait_people dl {
+  display: block;
+  height: 70px;
+  text-align: right;
+}
+
+.dss_portrait_people dt {
+  width: 86px;
+  display: inline-block;
+  text-align: left;
+}
+
+.dss_portrait_people dt::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: #3499FE;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.dss_portrait_people dt.fix::before {
+  background-color: #F9B723;
+}
+
+.dss_portrait_people dd {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1488px) {
+  .dss_portrait_people dd {
+    width: 86px;
+    text-align: left;
+  }
+}
+
+.dss_portrait_action::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  top: 0;
+  left: 70px;
+  height: 100%;
+  background: rgba(151, 151, 151, 0.20);
+}
+
+.dss_portrait_action::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 70px;
+  bottom: 0;
+  width: calc(100% - 70px);
+  background: rgba(151, 151, 151, 0.20);
+}
+
+.dss_portrait_action .el-progress-bar__outer {
+  overflow: hidden;
+  background-color: rgba(241, 244, 247, 0.60);
+}
+
+.dss_portrait_action .el-progress-bar__innerText {
+  margin: -5px -42px 0 0;
+  color: #000;
+}
+
+.dss_tooltip_t {
+  text-align: center;
+  display: block;
+  opacity: 0.5;
+  font-size: 14px;
+  color: #fff;
+}
+
+.dss_tooltip_d {
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 5px;
+}

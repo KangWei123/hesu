@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .audio-container {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 1px solid #e7e7eb;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+    }
+
+    .audio-icon {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-right: 1em;
+      background: url(https://res.wx.qq.com/mpres/zh_CN/htmledition/comm_htmledition/style/widget/pages/audio_z3a7b39.png) 0 0 no-repeat;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="audio-container">
+    <i class="audio-icon"></i>
+    <p class="audio-title"></p>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      var iframe = getSelfIframe();
+      /* 获得当前公式所在的iframe节点 */
+      function getSelfIframe() {
+        var iframes = parent.document.getElementsByTagName('iframe');
+        for (var key in iframes) {
+          if (iframes[key].contentWindow == window) {
+            return iframes[key];
+          }
+        }
+        return null;
+      }
+
+      function getTitle() {
+        return iframe.getAttribute('data-title') || ''
+      }
+      var title = getTitle();
+      console.log(document.getElementsByClassName('audio-title'))
+      document.getElementsByClassName('audio-title')[0].innerHTML = title
+    })
+
+  </script>
+</body>
+
+</html>

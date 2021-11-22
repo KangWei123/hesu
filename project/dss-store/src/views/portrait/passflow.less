@@ -1,0 +1,148 @@
+@primary-color: #487CED;
+@danger-color: #FF5C56;
+
+.primary-color {
+  color: @primary-color;
+}
+
+.danger-color {
+  color: @danger-color;
+}
+
+// fix:tab-item失去焦点时会显示一个边框
+.el-tabs__item:focus.is-active.is-focus:not(:active) {
+  box-shadow: none;
+}
+
+.dss_portrait {
+  /*overflow-x: hidden;*/
+  .el-card {
+    margin-bottom: 11px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-width: 0;
+
+  }
+}
+
+.portrait-container {
+  .el-col {
+    margin-bottom: 20px;
+  }
+
+  /deep/ .portrait-card.el-card {
+    .el-card__header {
+      padding: 20px 20px 0;
+    }
+
+    &.no-padding-tb {
+      .el-card__body {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+.dss_portrait_title {
+  font-size: 16px;
+  color: #222B4D;
+  margin: 0;
+}
+
+.portrait-legend {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #858C99;
+
+  span {
+    background-image: url(../../asserts/images/legend-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 16px;
+    width: 22px;
+    top: 3.5px;
+    margin-right: 3px;
+    position: relative;
+  }
+}
+
+.dss_portrait_desc {
+  margin: 2px 0 0;
+  opacity: 0.5;
+  font-size: 12px;
+  color: #012334;
+  display: none;
+}
+
+.dss_portrait_sex {
+  display: block;
+  margin: 40px 0 0;
+
+  .item-num {
+    font-family:Lato-Regular;
+    font-size: 30px;
+    margin-top: 34px;
+    margin-bottom: 26px;
+  }
+}
+
+.dss_portrait_tab {
+  text-align: center
+}
+
+.dss_portrait_people {
+  padding-left: 10px;
+  text-align: center;
+
+  .people-item {
+    display: inline-block;
+  }
+
+  .item-num {
+    font-family:Lato-Regular;
+    font-size: 30px;
+  }
+
+  .item-point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+
+.dss-radios-group {
+  box-shadow:0px 4px 6px 3px rgba(95,98,113,0.04);
+  border-radius: 16px;
+
+  .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    color: @primary-color;
+    background: transparent;
+    border-width: 0;
+    box-shadow: none;
+  }
+
+  .el-radio-button:first-child .el-radio-button__inner {
+    border-radius: 16px 0 0 16px;
+    border-width: 0;
+  }
+
+  .el-radio-button:last-child .el-radio-button__inner {
+    border-radius: 0 16px 16px 0;
+  }
+
+  .el-radio-button__inner {
+    border-width: 0;
+    color: #566980;
+    padding: 8px 20px;
+    font-weight: 400;
+
+    &:hover {
+      color: @primary-color;
+
+    }
+  }
+}

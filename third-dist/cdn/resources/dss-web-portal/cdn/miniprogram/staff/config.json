@@ -1,0 +1,610 @@
+{
+    "style": "--main-color:#3a8fff",
+    "tabBar": {
+        "backgroundColor": "#333333",
+        "borderStyle": "#333333",
+        "selectedColor": "#3A8FFF",
+        "list": [
+            {
+                "iconPath": "images/tabbar/index.png",
+                "selectedIconPath": "images/tabbar/index-selected.png",
+                "text": "首页"
+            },
+            {
+                "iconPath": "images/tabbar/tools.png",
+                "selectedIconPath": "images/tabbar/tools-selected.png",
+                "text": "工具"
+            },
+            {
+                "iconPath": "images/tabbar/customer.png",
+                "selectedIconPath": "images/tabbar/customer-selected.png",
+                "text": "客户"
+            },
+            {
+                "iconPath": "images/tabbar/statistics.png",
+                "selectedIconPath": "images/tabbar/statistics-selected.png",
+                "text": "统计"
+            }
+        ]
+    },
+    "components": {
+        "custom-navigation-bar": {},
+        "more-append-list-container": {},
+        "loading-indicator": {}
+    },
+    "pages": {
+        "common": {
+            "staff": {}
+        },
+        "index": {
+            "experiment": [
+                {
+                    "nodes": [
+                        {
+                            "name": "img",
+                            "attrs": {
+                                "style": "width:40vw;display:block;margin:-22vw auto 0",
+                                "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/fail.png"
+                            }
+                        },
+                        {
+                            "name": "div",
+                            "attrs": {
+                                "style": "margin-top:1vw;color:#999;text-align:center;font-size:3.2vw;"
+                            },
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "text": "如需正常使用，请登陆企业微信打开"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "div",
+                            "attrs": {
+                                "style": "margin-top:0.4vw;color:#999;text-align:center;font-size:3.2vw;"
+                            },
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "text": "如需了解，点击“进入体验版”进行体验"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "style": "margin-top:90rpx",
+                    "nodes": [
+                        {
+                            "name": "div",
+                            "attrs": {
+                                "style": "color:#fff;background:var(--main-color);height:12vw;line-height:12vw;text-align:center;border-radius:0.53vw;width:44.8vw;font-size:4.8vw"
+                            },
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "text": "进入体验版"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "text1": "请检查网络是否正常～",
+            "text2": "或反馈企业管理员是否开通权限",
+            "text3": "如需正常使用，请登陆企业微信打开",
+            "text4": "如需了解，点击“进入体验版”进行体验",
+            "text5": "进入体验版",
+            "text6": "正在身份认证...",
+            "index": {
+                "tools": [
+                    {
+                        "url": "follow-remind",
+                        "src": "remind",
+                        "name": "消息通知"
+                    },
+                    {
+                        "url": "order",
+                        "src": "order",
+                        "name": "订单管理"
+                    },
+                    {
+                        "url": "form",
+                        "src": "form",
+                        "name": "客户表单"
+                    },
+                    {
+                        "url": "calling-card",
+                        "src": "card",
+                        "name": "分享名片"
+                    }
+                ],
+                "guestList": {
+                    "title": "实时雷达",
+                    "options": [
+                        "全部",
+                        "线上雷达",
+                        "线下客流"
+                    ],
+                    "richText": [
+                        {
+                            "nodes": [
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "color:var(--main-color);font-size:2.93vw;margin-left:2.13vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "线索客户"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "text1": "线索客户",
+                    "text2": "门店访客",
+                    "text3": "微商城游客",
+                    "text4": "分配线索",
+                    "text5": "查看详情"
+                }
+            }
+        },
+        "tools": {
+            "index": [
+                {
+                    "groupName": "运营工具",
+                    "tools": [
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/remind.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "消息通知"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "follow-remind",
+                            "src": "remind",
+                            "style": "padding:37rpx 0;max-width:25%;flex:1 22%;text-align:center;position:relative",
+                            "name": "消息通知"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/charge.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "核销工具"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "charge-off",
+                            "src": "charge",
+                            "name": "核销工具"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/task.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "任务目标"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "task",
+                            "src": "task",
+                            "name": "任务目标"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/form.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "客户表单"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "form",
+                            "src": "form",
+                            "name": "客户表单"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/shop.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "分享商城"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "src": "shop",
+                            "target": "miniProgram",
+                            "name": "分享商城"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/batch.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "群发助手"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "batch",
+                            "src": "batch",
+                            "show": [
+                                "common_role_storeKeeper",
+                                "common_role_enterprise"
+                            ],
+                            "name": "群发助手"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/card.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "分享名片"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "calling-card",
+                            "src": "card",
+                            "name": "分享名片"
+                        }
+                    ]
+                },
+                {
+                    "groupName": "客户推广",
+                    "tools": [
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/guest.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "实时客流"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "passenger-flow",
+                            "src": "guest",
+                            "klbStatus": 1,
+                            "name": "实时客流"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/staff.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "员工管理"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "staff",
+                            "src": "staff",
+                            "show": [
+                                "common_role_storeKeeper",
+                                "common_role_enterprise"
+                            ],
+                            "name": "员工管理"
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "name": "img",
+                                    "attrs": {
+                                        "style": "width:8vw;height:8vw;margin:auto;display:block;object-fit:contain",
+                                        "src": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/tools/order.svg"
+                                    }
+                                },
+                                {
+                                    "name": "div",
+                                    "attrs": {
+                                        "style": "margin-top:2.13vw;line-height:1.7;font-size:3.47vw"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "订单管理"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "url": "order",
+                            "src": "order",
+                            "name": "订单管理"
+                        }
+                    ]
+                }
+            ],
+            "batch": {
+                "create": {
+                    "miniprogram": {
+                        "list": [
+                            {
+                                "title": "首页",
+                                "page": "/wxat-common/pages/home/index",
+                                "pic": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/a.jpg"
+                            },
+                            {
+                                "title": "优惠券",
+                                "page": "/wxat-common/pages/coupon-list/index",
+                                "pic": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/b.jpg"
+                            }
+                        ]
+                    }
+                }
+            },
+            "task": {
+                "taskType": [
+                    "新客户推广",
+                    "客户预约",
+                    "推广订单"
+                ],
+                "tabs": [
+                    [
+                        "全部",
+                        "未开始",
+                        "进行中",
+                        "已过期"
+                    ],
+                    [
+                        "全部",
+                        "未读",
+                        "已读",
+                        "未完成",
+                        "已完成",
+                        "未开始",
+                        "进行中",
+                        "已过期"
+                    ]
+                ]
+            }
+        },
+        "client": {
+            "index": {
+                "top": [
+                    {
+                        "text": "全部",
+                        "value": 4
+                    },
+                    {
+                        "text": "线索",
+                        "value": 2,
+                        "navigator": [
+                            {
+                                "text": "添加线索",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            },
+                            {
+                                "text": "添加客户",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            },
+                            {
+                                "text": "批量管理",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            },
+                            {
+                                "text": "客户筛选",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "text": "客户",
+                        "value": 3,
+                        "navigator": [
+                            {
+                                "text": "工作交接",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            },
+                            {
+                                "text": "添加客户",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            },
+                            {
+                                "text": "批量管理",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            },
+                            {
+                                "text": "客户筛选",
+                                "show": [
+                                    "common_role_storeKeeper",
+                                    "common_role_enterprise"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "detail": {}
+        },
+        "analysis": {
+            "index": {
+                "userRoute": [
+                    {
+                        "name": "客流分析",
+                        "klbStatus": 1,
+                        "icon": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/home/passenger-flow-analysis.svg",
+                        "url": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fpassflow.html%3Fa%3Da",
+                        "url0": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fpassflow-analysis.html"
+                    },
+                    {
+                        "name": "销售分析",
+                        "icon": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/home/sales-analysis.svg",
+                        "url": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fsales.html%3Fa%3Da",
+                        "url0": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fsales-analysis.html"
+                    },
+                    {
+                        "name": "客户分析",
+                        "icon": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/home/member-manage.svg",
+                        "url": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fvip.html%3Fa%3Da",
+                        "url0": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fclient-analysis.html"
+                    },
+                    {
+                        "name": "营销分析",
+                        "icon": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/home/product-analysis.svg",
+                        "url": "/pages/analysis/coming-soon/index"
+                    },
+                    {
+                        "name": "业绩排行榜",
+                        "icon": "https://cdn.wakecloud.com/resources/dss-web-portal/cdn/miniprogram/staff/images/home/staff-analysis.svg",
+                        "url": "/pages/analysis/coming-soon/index",
+                        "url0": "/pages/common/web-view/index?src=https%3A%2F%2Fwww.wakedata.com%2Fwkt-webview%2Fachieve-rank.html"
+                    }
+                ]
+            }
+        }
+    },
+    "role": {
+        "common_role_enterprise": "总部管理员",
+        "common_role_area_manager": "区域管理员",
+        "common_role_storeKeeper": "店长",
+        "common_role_sales": "导购员",
+        "common_role_clerk": "店员",
+        "common_role_cashier": "收银员",
+        "common_role_verifications": "核销员",
+        "common_role_technician": "技师",
+        "common_role_admin": "管理员"
+    }
+}

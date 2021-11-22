@@ -1,0 +1,275 @@
+.weekly {
+
+  & > .container {
+    background-color: white;
+    margin: 20px 0px 51px;
+    padding: 22px 50px;
+    font-family: PingFangSC-Semibold;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(215,224,234,1);
+      padding-bottom: 16px;
+
+      .title {
+        height:30px;
+        font-size:22px;
+        font-family:PingFangSC-Medium;
+        color:rgba(44,54,65,1);
+        line-height:30px;
+      }
+
+      .store-name {
+        margin-top: 10px;
+        display: flex;
+        font-size:16px;
+        font-family:PingFangSC-Medium;
+        color:rgba(44,54,65,1);
+        line-height:22px;
+        
+        & > .time-container {
+          margin-left: 48px;
+          font-size:16px;
+          font-family:PingFangSC-Regular;
+          color:rgba(133,140,153,1);
+          line-height:22px;
+        }
+      }
+    }
+
+    & > .moudle-container {
+      margin: 30px 0px 60px;
+      padding: 18px 0px 40px;
+      text-align: center;
+      border:1px solid rgba(215,224,234,1);
+      // box-shadow: 0px 10px 50px #e8ecf0;
+
+      & > .title {
+        font-size: 18px;
+        line-height: 25px;
+        color: #3b4757;
+        font-family: PingFangSC-Semibold;
+        padding-bottom: 40px;
+      }
+
+      & > .store-indicator-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: row;
+
+        @media screen and (max-width: 950px) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    } 
+  }
+
+  .weekly-dialog-container {
+    padding: 0px 20px;
+    margin-top: -25px;
+    // background-color: red;
+    
+    .header {
+      display: flex;
+      &:hover {
+        cursor: pointer;
+      }
+      &>:nth-child(n) {
+        margin-right: 20px;
+
+        &>.normal {
+          color: #9CA3AA;
+          font-family: PingFangSC-Regular;
+          font-size: 16px;
+        }
+        &>.select {
+          color: #3499FE;
+          font-family: PingFangSC-Medium;
+          font-size: 16px;
+        }
+
+        &>.line {
+        width: 100%;
+        height: 2px;
+        background: #3499FE;
+        }
+      }
+    }
+
+    .sperator-line {
+      margin: 10px 0;
+      height: 1px;
+      width: 100%;
+      background-color: #E4E9EE;
+    }
+
+    .link-container {
+      display: flex;
+      padding: 45px 10px 65px;
+      // width: 100%;
+      & > div {
+        width: 100%
+      }
+      // 解决element el-input suffix时  多出一个right 5px,复制按钮向右移动了5px;
+      & > div > .input > .el-input__suffix {
+        right: 0px;
+      }
+      // 插入复制按钮时，遮挡了输入框的内容
+      & > div > .input > .el-input__inner {
+        padding-right: 90px;
+      }
+    }
+
+  }
+
+  .passenger-flow-portrait-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+
+    @media screen and (max-width: 950px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    .passenger-flow-portrait-sub-container {
+      border-radius: 4px;
+      border:1px solid rgba(215,224,234,1);
+      margin-bottom: 3%;
+    }
+
+    .sex {
+      width: 37%;
+      height: 220px;
+      
+      @media screen and (max-width: 950px) {
+        width: 100%;
+      }
+    }
+
+    .consumption {
+      width: 60%;
+      height: 220px;
+      
+      @media screen and (max-width: 950px) {
+        width: 100%;
+      }
+    }
+
+    .age {
+      width: 100%;
+      height: 207px;
+    }
+
+    .job {
+      width: 100%;
+      height: 367px;
+    }
+
+    .passenger-flow-portrait-title {
+      text-align: left;
+      height: 20%;
+      padding: 20px 0px 0px 20px;
+      font-size: 16px;
+      color: #4e4e4e;
+      letter-spacing: 0;
+      font-family: PingFangSC-Semibold;
+      box-sizing: border-box;
+      line-height:22px;
+    }
+
+    .data-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-top: 5%;
+      height: 80%;
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &>.value {
+          margin-bottom: 9px;
+          font-size:28px;
+          font-family:DINPro-Medium;
+          color:rgba(44,54,65,1);
+          line-height:36px;
+        }
+  
+        &>.name {
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          margin-bottom: 20px;
+          color:rgba(86,105,128,1);
+        }
+  
+        .man {
+          font-size:14px;
+          font-family:PingFangSC-Regular;
+          color:rgba(72,124,237,1);
+        }
+  
+        .woman {
+          font-size:14px;
+          font-family:PingFangSC-Regular;
+          color:rgba(255,92,86,1);
+        }
+  
+        .data-container-rate {
+          font-family: PingFangSC-Regular;
+          font-size: 16px;
+          letter-spacing: 0;
+          display: flex;
+          align-items: center;
+
+          &>div:first-child {
+            font-size:14px;
+            font-family:PingFangSC-Regular;
+            color:rgba(133,140,153,1);
+          }
+        }
+  
+        .increase {
+          & > .ratio-value {
+            color: #ff6f3a;
+            font-family:DIN-Medium;
+            margin-left: 10px;
+          }
+          & > .indicator {
+            width: 14px;
+            height: 16px;
+            background: url('../../../../../../..//dss-common/img/icons/increase.png') no-repeat center / cover;
+            margin-left: 5px;
+          }
+        }
+  
+        .reduce {
+          & > .ratio-value {
+            color: #28D79D;
+            font-family:DIN-Medium;
+            margin-left: 10px;
+          }
+          & > .indicator {
+            width: 14px;
+            height: 16px;
+            background: url('../../../../../../../dss-common/img/icons/reduce.png') no-repeat center / cover;
+            margin-left: 5px;
+          }
+        }
+      }
+      
+      & > div:nth-child(n) {
+        width: 45%;
+        // height: 100%;
+      }
+    }
+  }
+}
+
+

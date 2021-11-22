@@ -1,0 +1,280 @@
+.wkt-body .marketing-page, .wkb-market .marketing-page {
+  .marketing-tips {
+    text-align: left;
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: @light-black-color;
+    line-height: 17px;
+  }
+  .status-unshelf, .status-unshelf:hover {
+    color: #717378;
+    border-radius: 14px;
+    vertical-align: middle;
+    padding: 0 10px 0 14px;
+  }
+
+  .status-shelf, .status-shelf:hover {
+    color:#52C41A;
+    padding: 0 10px 0 14px;
+    vertical-align: middle;
+  }
+
+  .divider {
+    display: inline-block;
+    border-left: 1px solid rgba(186, 198, 211, 1);
+    color: @border-color;
+    height: 30px;
+    vertical-align: top;
+    margin: 0 10px;
+  }
+
+  .market-shelf {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.wkb-market-setting {
+  .poster-preview-box {
+    position: absolute;
+    left: 600px;
+    .poster-preview {
+      position: relative;
+    }
+    .poster-img {
+      width: 260px;
+      height: 415px;
+    }
+    .nick-header-box {
+      position: absolute;
+      left: 22.5px;
+      top: 0;
+      width: 215px;
+    }
+    .nick-header {
+      position: relative;
+    }
+
+    .nick-img {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+    }
+
+    .nick-name {
+      position: absolute;
+      left: 50px;
+    }
+
+    .poster-content {
+      position: absolute;
+      left: 50px;
+      top: 20px;
+      display: inline-block;
+      background: rgba(240, 85, 108, 1);
+      border-radius: 4px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 5px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .poster-content:before {
+      content: "";
+      width: 0;
+      height: 0;
+      left: -4.5px;
+      top: 7.5px;
+      position: absolute;
+      border-top: 4.5px solid transparent;
+      border-right: 9px solid rgba(240, 85, 108, 1);
+      border-bottom: 4.5px solid transparent;
+    }
+
+    .customer-header {
+      position: absolute;
+      left: 22.5px;
+      width: 215px;
+      height: 45px;
+    }
+
+    .poster-label {
+      position: absolute;
+      height: 15px;
+      font-size: 11px;
+      font-family: PingFangSC-Medium,PingFang SC;
+      font-weight: 500;
+      color: rgba(229,50,50,1);
+      line-height: 15px;
+      left: 26.5px;
+      top: 333.5px;
+    }
+    .label-price {
+      position: absolute;
+      height: 17px;
+      font-size: 12px;
+      font-family: PingFangSC-Regular,PingFang SC;
+      font-weight: 400;
+      color: rgba(168,168,168,1);
+      line-height: 17px;
+      left: 23px;
+      top: 382px;
+    }
+  }
+  .title {
+    position: relative;
+  }
+  .poster-preview-box-new {
+    position: absolute;
+    left: 600px;
+    top: -110px;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 30px;
+    width: 330px;
+    height: 490px;
+    display: flex;
+    .poster-preview {
+      width: 310px;
+      height: 445px;
+      border: 1px solid #e8e8e8;
+      border-radius: 17px;
+      position: relative;
+      text-align: center;
+      align-self: center;
+      margin: 0 auto;
+    }
+    .poster-img {
+      width: 310px;
+      height: 445px;
+      border-radius: 17px;
+    }
+    .phone-head {
+      width: 37px;
+      height: 6px;
+      background: #ecf2fc;
+      border-radius: 4px;
+      position: absolute;
+      top: -12px;
+      left: 130px;
+    }
+    .nick-header-box {
+      position: absolute;
+      left: 18px;
+      top: 12px;
+      width: 257px;
+      height: 45px;
+      background: rgba(255, 255, 255, .6);
+      border-radius: 20px;
+    }
+    .nick-header {
+      position: relative;
+    }
+
+    .nick-img {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      left: 0px;
+    }
+
+    .nick-name {
+      position: absolute;
+      left: 50px;
+      font-size: 11px;
+      color: #999999;
+      padding-top: 4px;
+    }
+
+    .poster-content {
+      text-align: left;
+      position: absolute;
+      left: 50px;
+      top: 20px;
+      display: inline-block;
+      width: 200px;
+      padding-top: 2px;
+      font-size: 13px;
+      color: #000000;
+      overflow: hidden;
+      /*文本不会换行*/
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .customer-header {
+      position: absolute;
+      left: 18px;
+      top: 12px;
+      width: 257px;
+      height: 45px;
+    }
+
+    .poster-label {
+      position: absolute;
+      height: 15px;
+      font-size: 11px;
+      font-family: PingFangSC-Medium,PingFang SC;
+      color: #c33f3e;
+      line-height: 15px;
+      left: 39px;
+      top: 335.5px;
+    }
+    .label-price {
+      position: absolute;
+      height: 17px;
+      font-size: 12px;
+      font-family: PingFangSC-Regular,PingFang SC;
+      font-weight: 400;
+      color: rgba(168,168,168,1);
+      line-height: 17px;
+      left: 23px;
+      top: 382px;
+    }
+  }
+}
+
+
+.discount-list{
+  .discount-head {
+    .bg-mixin;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 16px;
+
+    .filter-input {
+      width: 250px;
+    }
+
+    .head-btn-box {
+      text-align: left;
+    }
+
+    .marketing-tips {
+      height: 17px;
+      font-size: 12px;
+      color: #999;
+      line-height: 17px;
+      text-align: left;
+    }
+  }
+
+  .goods-list {
+    .bg-mixin;
+    border-radius: 4px;
+    padding-bottom: 20px;
+
+    .wkt-table {
+      border-radius: 4px 4px 0px 0px;
+    }
+  }
+
+}

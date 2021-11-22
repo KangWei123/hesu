@@ -1,0 +1,138 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .el-date-editor {
+    margin-left: 15px;
+  }
+
+  .time-control {
+    width: 130px;
+    margin-left: 30px;
+  }
+
+  .btn {
+    margin-left: 10px;
+    width: 60px;
+    padding: 2px 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #397bf1;
+    cursor: pointer;
+  }
+
+  .date-select {
+    margin-left: 10px;
+  }
+
+  .el-select {
+    margin-left: 10px;
+    width: 70px;
+
+    .el-input.el-input--suffix {
+      height: 34px;
+
+      .el-input__inner {
+        height: 34px !important;
+      }
+    }
+  }
+}
+
+.customer-container {
+  background: #fff;
+
+  .portrait_chart_bottom {
+    width: 160px;
+    margin-top: 20px;
+    .data{
+      font-size:18px;
+    }
+    .data, .old, .new {
+      width: 48%;
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .old, .new {
+      color: #3B4757;
+      font-size: 12px;
+    }
+    .new::before, .old::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #F3712A;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .new::before {
+      background-color: #2A75FC;
+    }
+
+  }
+
+  .card-title {
+    padding: 17px 30px;
+  }
+
+  .customer-chart {
+    overflow: hidden;
+    padding: 17px 30px;
+  }
+
+  .pie-content {
+    width: 20% !important;
+    height: 250px;
+    margin-left:40px;
+    float: left;
+  }
+
+  .line-content {
+    width: 75% !important;
+    height: 250px;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .customer-container {
+    .pie-content {
+      width: 40%;
+    }
+
+    .line-content {
+      width: 60%;
+    }
+  }
+}
+
+.rvisit-cycle, .detail-container {
+  margin-top: 10px;
+  background: #fff;
+
+  th, tr {
+    /*text-align: center;*/
+  }
+
+  .card-title {
+    padding: 10px 30px 0;
+  }
+
+  .customer-chart {
+    padding: 0 20px;
+  }
+
+  .el-pagination {
+    text-align: center;
+    padding: 30px 0;
+  }
+}

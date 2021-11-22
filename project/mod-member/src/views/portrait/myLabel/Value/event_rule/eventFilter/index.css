@@ -1,0 +1,14 @@
+section ol li {
+  display: flex;
+  margin: 8px 22px;
+  align-items: center;
+}
+li > * {
+  margin-right: 10px;
+}
+.el-input {
+  width: 220px;
+}
+section .remove {
+  margin-left: 10px;
+}

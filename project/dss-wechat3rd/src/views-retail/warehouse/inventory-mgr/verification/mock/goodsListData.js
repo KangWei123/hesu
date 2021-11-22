@@ -1,0 +1,181 @@
+const mockGoodsListData = {
+  success: true,
+  data: [
+    {
+      storeId: 1160,
+      itemNo: '5412128798338086001',
+      categoryId: 104,
+      categoryName: null,
+      tag1: 16,
+      unit: null,
+      skuId: null,
+      barcode: 'WD015412128797998',
+      itemName: 'px新防晒多门店无sku1',
+      thumbnail: 'https://image.res.meizu.com/image/dss-wshop/d425c35062ca41dc877cc69b27182334z/auto',
+      itemType: 1,
+      itemTypeVal: 'PRODUCT',
+      itemCount: 10,
+      itemStock: 10,
+      itemWithholdStock: 0,
+      itemAttrVal: null,
+      salePrice: 100,
+      labelPrice: 100,
+      itemShelf: 1,
+      freight: 0,
+      describe: null,
+      itemAttrAsStr: null
+    },
+    {
+      storeId: 1160,
+      itemNo: '5400173187260802001',
+      categoryId: 104,
+      categoryName: null,
+      tag1: 16,
+      unit: '件',
+      skuId: 155,
+      barcode: 'WD015403513596123',
+      itemName: 'px新护肤1',
+      thumbnail: 'https://image.res.meizu.com/image/dss-wshop/aeda9fed76a2438f8e519a1cafdd5a7cz/auto',
+      itemType: 1,
+      itemTypeVal: 'PRODUCT',
+      itemCount: 1000,
+      itemStock: 1000,
+      itemWithholdStock: 0,
+      itemAttrVal: [
+        {
+          id: 95,
+          attrKeyId: 65,
+          attrValue: '大',
+          imageId: null,
+          imageUrl: null,
+          createTime: 1540176498000,
+          updateTime: 1540176498000
+        }
+      ],
+      salePrice: 10,
+      labelPrice: 10,
+      itemShelf: 1,
+      freight: 0,
+      describe: null,
+      itemAttrAsStr: '大'
+    },
+    {
+      storeId: 1160,
+      itemNo: '5400173187260802001',
+      categoryId: 104,
+      categoryName: null,
+      tag1: 16,
+      unit: '件',
+      skuId: 154,
+      barcode: 'WD015403513598832',
+      itemName: 'px新护肤1',
+      thumbnail: 'https://image.res.meizu.com/image/dss-wshop/aeda9fed76a2438f8e519a1cafdd5a7cz/auto',
+      itemType: 1,
+      itemTypeVal: 'PRODUCT',
+      itemCount: 1000,
+      itemStock: 1000,
+      itemWithholdStock: 0,
+      itemAttrVal: [
+        {
+          id: 96,
+          attrKeyId: 65,
+          attrValue: '小',
+          imageId: null,
+          imageUrl: null,
+          createTime: 1540176505000,
+          updateTime: 1540176505000
+        }
+      ],
+      salePrice: 10,
+      labelPrice: 10,
+      itemShelf: 1,
+      freight: 0,
+      describe: null,
+      itemAttrAsStr: '小'
+    },
+    {
+      storeId: 1160,
+      itemNo: '5404322468464513001',
+      categoryId: 82,
+      categoryName: null,
+      tag1: 16,
+      unit: '件',
+      skuId: 156,
+      barcode: 'WD015404322462441',
+      itemName: 'px新飘柔洗发水1',
+      thumbnail: 'https://image.res.meizu.com/image/dss-wshop/d425c35062ca41dc877cc69b27182334z/auto',
+      itemType: 1,
+      itemTypeVal: 'PRODUCT',
+      itemCount: 9987,
+      itemStock: 9987,
+      itemWithholdStock: 0,
+      itemAttrVal: [
+        {
+          id: 96,
+          attrKeyId: 65,
+          attrValue: '小',
+          imageId: null,
+          imageUrl: null,
+          createTime: 1540176505000,
+          updateTime: 1540176505000
+        }
+      ],
+      salePrice: 1000,
+      labelPrice: 1000,
+      itemShelf: 1,
+      freight: 100,
+      describe: null,
+      itemAttrAsStr: '小'
+    },
+    {
+      storeId: 1160,
+      itemNo: '5402594305173370001',
+      categoryId: 101,
+      categoryName: null,
+      tag1: 16,
+      unit: '件',
+      skuId: 152,
+      barcode: 'WD015402594301983',
+      itemName: 'px新面部精华有sku1',
+      thumbnail: 'https://image.res.meizu.com/image/dss-wshop/d425c35062ca41dc877cc69b27182334z/auto',
+      itemType: 1,
+      itemTypeVal: 'PRODUCT',
+      itemCount: 999,
+      itemStock: 999,
+      itemWithholdStock: 0,
+      itemAttrVal: [
+        {
+          id: 95,
+          attrKeyId: 65,
+          attrValue: '大',
+          imageId: null,
+          imageUrl: null,
+          createTime: 1540176498000,
+          updateTime: 1540176498000
+        },
+        {
+          id: 63,
+          attrKeyId: 42,
+          attrValue: '浅色',
+          imageId: null,
+          imageUrl: null,
+          createTime: 1538642799000,
+          updateTime: 1538642799000
+        }
+      ],
+      salePrice: 10,
+      labelPrice: 10,
+      itemShelf: 1,
+      freight: 0,
+      describe: null,
+      itemAttrAsStr: '大|浅色'
+    }
+  ],
+  errorCode: null,
+  errorMessage: null,
+  pageSize: 5,
+  pageNo: 1,
+  totalCount: 16
+};
+
+export default mockGoodsListData;

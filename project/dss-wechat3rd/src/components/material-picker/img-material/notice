@@ -1,0 +1,6 @@
+todo 最终需要替换 wk-bz-common 的 imgMaterial
+
+依赖：
+../../business/wp-base-api.js
+import services from '../../utils/services.js';
+import wpBaseApi from '../../business/wp-base-api.js';

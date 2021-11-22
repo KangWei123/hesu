@@ -1,0 +1,111 @@
+.gift-card-edit {
+  .wkt-card {
+    padding: 20px 20px 0;
+    overflow: hidden;
+  }
+
+  .btn-delete {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: none;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 8px;
+    padding: 1px;
+    top: 5px;
+    background: #bac6d3;
+    &:active {
+      border-width: 0;
+    }
+    .el-icon-close {
+      color: #6c7e93;
+    }
+  }
+
+  .div-input {
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    background: #fff;
+    padding-left: 15px;
+    color: #606266;
+    font-size: 12px;
+    width: 150px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .btn-delete:hover {
+    color: #ff562d;
+  }
+
+  .activity-form {
+    .el-date-editor {
+      width: 100%;
+    }
+    /deep/ .el-input {
+      max-width: 350px;
+    }
+    .middle-width {
+      width: 150px;
+    }
+
+    .div-input {
+      border-radius: 4px;
+      border: 1px solid #dcdfe6;
+      background: #fff;
+      padding-left: 15px;
+      color: #606266;
+      font-size: 12px;
+      width: 150px;
+      box-sizing: border-box;
+      display: inline-block;
+      height: 28px;
+      line-height: 28px;
+    }
+
+    .tip-msg {
+      color: @light-black-color;
+      font-size: @small-font;
+    }
+    /*商品选择样式*/
+    .form-goods {
+      width: 300px;
+      background: rgba(237, 241, 247, 1);
+      height: 28px;
+      line-height: 28px;
+      font-size: 12px;
+      border-radius: 2px;
+      padding: 0 9px;
+      box-sizing: border-box;
+      color: #31343B;
+      padding-right: 22px;
+      position: relative;
+      cursor: pointer;
+      div {
+        display: inline-block;
+        float: left;
+        margin-right: 25px;
+      }
+      .goods-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 130px;
+      }
+      .goods-price {
+        color: #ff562d;
+      }
+
+
+    }
+  }
+
+  .footer {
+    margin: 30px 0 0 150px;
+  }
+}

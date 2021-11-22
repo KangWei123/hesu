@@ -1,0 +1,618 @@
+@font-face {
+  font-family: 'DIN';
+  src: url('../../font/DINPro-Medium.otf');
+}
+
+.wkb-console-container {
+  &.wkt-sub-nav-container .sub-nav-content-container .sub-nav-content .real-content {
+    background-color: rgba(242, 244, 247, 1);
+    min-height: calc(100vh - 114px); /* 加上阴影的高度(4px) */
+  }
+
+  &.wkt-sub-nav-container .sub-nav-content-container .sub-nav-content {
+    padding-top: 0;
+  }
+}
+
+.console-scroll {
+  &.wkb-sub-nav-container {
+    .sub-nav-content-container .sub-nav-content .real-content {
+      min-height: calc(100vh - 131px); /* 加上滚动条的宽度（17px）和阴影的高度(4px) */
+    }
+  }
+}
+
+.wkb-console {
+  display: flex;
+  font-family: PingFangSC, PingFangSC-Regular;
+
+  .left {
+    flex: 1;
+  }
+
+  .to-pay {
+    width: 650px;
+    height: 56px;
+    line-height: 56px;
+    background: rgba(98, 106, 126, 1);
+    border-radius: 28px 28px 28px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
+
+    ._title {
+      margin: 0 26px 0 47px;
+      font-size: 16px;
+      font-family: MicrosoftYaHei-Bold;
+      font-weight: bold;
+    }
+
+    ._buy {
+      display: inline-block;
+      width: 84px;
+      height: 28px;
+      border-radius: 16px;
+      line-height: 28px;
+      border: 2px solid #fff;
+      text-align: center;
+      margin: 12px 13px 0 0;
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  .agency-affairs,
+  .data-analysis,
+  .common-usefun,
+  .common-usefun_bus {
+    background: #fff;
+    border-radius: 4px;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+
+    ._title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 600;
+      border-bottom: 1px solid #ebeef5;
+      color: #303133;
+      padding-bottom: 12px;
+      box-sizing: border-box;
+      line-height: 20px;
+      margin-bottom: 20px;
+
+      .datetime {
+        color: #a1a4ab;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+
+    .money,
+    .num {
+      font-size: 26px;
+      color: #303133;
+      font-weight: 500;
+      margin-bottom: 9px;
+      font-family: 'DIN';
+      line-height: 33px;
+    }
+
+    .cent {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .console-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 3px;
+      }
+
+      .txt {
+        font-size: 14px;
+      }
+    }
+
+    .compare {
+      font-size: 12px;
+
+      .txt {
+        color: #717378;
+      }
+
+      .add-reduce {
+        font-size: 13px;
+        color: #ff6c0e;
+      }
+
+      .val {
+        font-size: 13px;
+        color: #ff6c0e;
+      }
+
+      .arrow {
+        font-size: 16px;
+        color: #ff6c0e;
+        position: relative;
+        top: 1px;
+        left: 0;
+      }
+    }
+  }
+
+  .trip-warn {
+    font-size: 0;
+    height: 40px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+
+    .warn-icon-box {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #fff7e6;
+      border-radius: 4px;
+      vertical-align: top;
+      margin-right: 16px;
+    }
+
+    .warn-icon {
+      font-size: 22px;
+      color: #ffa940;
+      margin: 9px;
+    }
+
+    .warn-desc {
+      opacity: 1;
+      font-size: 14px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      text-align: left;
+      color: #303133;
+      line-height: 40px;
+      margin-right: 10px;
+    }
+
+    .warn-count {
+      color: #f5222d;
+    }
+  }
+
+  .key-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 16px;
+    float: right;
+  }
+
+  .console-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    display: inline-block;
+  }
+
+  .icon-console-sale {
+    background-image: url(../../images/console/icon_paper.png);
+  }
+
+  .icon-console-order {
+    background-image: url(../../images/console/icon_paper.png);
+  }
+
+  .icon-console-order-count {
+    background-image: url(../../images/console/ic-order-count.png);
+  }
+
+  .icon-console-income {
+    background-image: url(../../images/console/ic-income.png);
+  }
+
+  .icon-console-amount {
+    background-image: url(../../images/console/ic-amount.png);
+  }
+
+  .icon-console-member-order-count {
+    background-image: url(../../images/console/ic-pre-order.png);
+  }
+
+  .icon-console-buy-order {
+    background-image: url(../../images/console/ic-shopping-order.png);
+  }
+
+  .icon-console-schedule-count {
+    background-image: url(../../images/console/ic-schedude-order.png);
+  }
+
+  .icon-console-new-member {
+    background-image: url(../../images/console/ic-new-member.png);
+  }
+
+  .icon-appoint {
+    background-image: url(../../images/console/appoint.png);
+  }
+
+  .icon-message {
+    background-image: url(../../images/console/message.png);
+  }
+
+  .icon-delivery {
+    background-image: url(../../images/console/delivery.png);
+  }
+
+  .icon-refund {
+    background-image: url(../../images/console/refund.png);
+  }
+
+  .icon-newmember {
+    background-image: url(../../images/console/ic-member.png);
+  }
+
+  .icon-consume {
+    background-image: url(../../images/console/ic-consume.png);
+  }
+
+  .icon-parking {
+    background-image: url(../../images/console/ic-parking.png);
+  }
+
+  .icon-score {
+    background-image: url(../../images/console/ic-score.png);
+  }
+
+  .data-analysis {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    font-size: 0;
+
+    .da-title {
+      height: 22px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(51, 51, 51, 1);
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+
+    .analysis-item {
+      display: inline-block;
+      width: calc(33.3% - 16px);
+      min-width: 260px;
+      background: #fafafa;
+      border-radius: 4px;
+      margin-right: 16px;
+      cursor: pointer;
+
+      .item-icon-box {
+        display: inline-block;
+        width: 84px;
+        height: 84px;
+        background: rgba(245, 246, 250, 1);
+        border-radius: 4px;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 14px;
+      }
+
+      .item-icon {
+        width: 100%;
+        height: 100%;
+      }
+
+      .item-name {
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: #303133;
+        vertical-align: middle;
+      }
+    }
+
+    .analysis-item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .agency-affairs {
+    .agency-tab {
+      height: 36px;
+      padding: 0 16px 0 8px;
+      box-sizing: border-box;
+      background: #f5f7fa;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .key {
+        overflow: hidden;
+        font-size: 14px;
+        font-family: MicrosoftYaHei;
+        color: #303133;
+        padding-left: 8px;
+      }
+
+      .value {
+        font-size: 14px;
+        font-family: DIN-Medium;
+        color: #2e8dff;
+      }
+    }
+  }
+
+  .bottom-tip {
+    height: 48px;
+    line-height: 48px;
+    background: rgba(216, 216, 216, 0.11);
+    border: 1px solid rgba(232, 232, 232, 1);
+    font-family: MicrosoftYaHei;
+    color: rgba(32, 37, 44, 1);
+    margin-top: 10px;
+
+    span,
+    a {
+      margin-left: 20px;
+    }
+
+    .name {
+      font-size: 14px;
+    }
+
+    .desc {
+      font-size: 12px;
+    }
+  }
+
+  .common-usefun {
+    .agency-tab {
+      height: 36px;
+      padding: 0 16px 0 8px;
+      box-sizing: border-box;
+      background: #e6f7ff;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .name {
+        overflow: hidden;
+        font-size: 14px;
+        font-family: MicrosoftYaHei;
+        color: #303133;
+        padding-left: 8px;
+      }
+
+      .arrow {
+        font-size: 14px;
+        font-family: DIN-Medium;
+        color: #303133;
+      }
+    }
+
+    .el-col {
+      margin-bottom: 30px;
+    }
+
+    .el-col:nth-child(-n + 4) {
+      .agency-tab {
+        background: #fff7e6;
+      }
+    }
+  }
+
+  .common-usefun_bus {
+    .agency-tab {
+      width: 209px;
+      height: 48px;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+      }
+
+      .name {
+        overflow: hidden;
+        font-size: 14px;
+        font-family: MicrosoftYaHei;
+        color: #303133;
+      }
+    }
+  }
+
+  .goods-order-summary {
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 15px;
+    padding: 22px 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    .block {
+      //border:solid 1px silver;
+      border: 1px solid #bac6d3;
+      border-radius: 2px;
+      padding: 5px;
+    }
+  }
+
+  .right {
+    flex: 0 0 282px;
+
+    .top {
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      .imgTxt {
+        background: transparent url(../../images/console/set_meal.png) no-repeat;
+        background-size: cover;
+      }
+
+      .top-wrap {
+        min-height: 248px;
+        padding: 32px 24px 24px;
+        box-sizing: border-box;
+        position: relative;
+
+        .day-num,
+        .expire-time {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          span {
+            font-size: 14px;
+            color: #717378;
+          }
+
+          span:nth-child(2) {
+            color: #474747;
+          }
+        }
+
+        .day-num {
+          margin-bottom: 20px;
+        }
+
+        .renew {
+          width: 216px;
+          height: 36px;
+          background: #fa7516;
+          border-radius: 4px;
+          font-size: 14px;
+          color: #fff;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          left: 50%;
+          bottom: 24px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .btm {
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      .imgTxt {
+        background: transparent url(../../images/console/help_center.png) no-repeat;
+        background-size: cover;
+      }
+
+      .btm-wrap {
+        min-height: 248px;
+        padding: 32px 24px 24px;
+        box-sizing: border-box;
+
+        li {
+          font-size: 14px;
+          margin-bottom: 8px;
+
+          .link {
+            color: #303133;
+          }
+        }
+      }
+    }
+
+    .imgTxt {
+      height: 72px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .sign {
+        width: 7px;
+        height: 7px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        margin: 0 8px 0 15px;
+      }
+    }
+
+    .qrcode {
+      height: 72px;
+      border-radius: 4px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      .phone {
+        width: 76px;
+        height: 103px;
+        background: transparent url(../../images/console/phone.png) no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 14px;
+        bottom: 0;
+      }
+
+      .txt {
+        font-size: 16px;
+        color: #000;
+        margin-left: 100px;
+      }
+
+      .img-wrap {
+        width: 30px;
+        height: 30px;
+        background: transparent url(../../images/console/qrcode.png) no-repeat;
+        background-size: cover;
+        margin: 0 17px 0 39px;
+        cursor: pointer;
+        position: relative;
+
+        .img {
+          display: none;
+          width: 120px;
+          height: 120px;
+          border-radius: 4px;
+          box-shadow: 0 0 4px 4px lightgrey;
+          background: #fff;
+          padding: 10px;
+          position: absolute;
+          right: 100%;
+          bottom: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .img-wrap:hover {
+        .img {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,287 @@
+//@import "~element-ui/lib/theme-chalk/index.css";
+.cue-list-container {
+  ul {
+    list-style: none;
+  }
+  header {
+    height: 50px;
+    font-size: 20px;
+    font-family: PingFangSC-Regular;
+    font-weight: 600;
+    color: #333;
+    line-height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(215, 217, 219);
+    display: flex;
+    justify-content: space-between;
+    .left-help {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      i {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        border: 1px solid #666;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 16px;
+        font-size: 12px;
+        color: #666;
+        display: inline-block;
+        vertical-align: middle;
+        font-style: normal;
+        font-weight: 400;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #3879fb;
+        display: inline-block;
+      }
+    }
+  }
+  .breadcrumb {
+    height: 57px;
+    line-height: 57px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    display: flex;
+    list-style: none;
+    color: #333333;
+    font-size: 16px;
+    border-bottom: 1px solid #dcdde0;
+  }
+
+  li {
+    list-style: none;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .active {
+    color: #256eff;
+  }
+
+  .rect-btn {
+    width: 100px;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+  .add-member {
+    width: 100px;
+    border-radius: 15px;
+    font-size: 12px;
+    background-color: #e7ebf3;
+  }
+  .upload-member {
+    width: 100px;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+  .cue-list-filter-box {
+    position: relative;
+    /deep/.el-date-editor--daterange {
+      width: 472px;
+    }
+    .search {
+      .search-button {
+        width: 70px;
+        background-color: #3879fb;
+        color: white;
+        height: 30px;
+      }
+    }
+    .end-filter {
+      position: absolute;
+      right: 30px;
+    }
+  }
+
+  .dss-link:last-child {
+    padding: 0 10px;
+  }
+
+  .avatar-size {
+    font-size: 41px;
+    color: #e4e4e4;
+    transform: translateY(9px);
+    border-radius: 100%;
+  }
+
+  .member-assign {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(245, 247, 250);
+  }
+
+  .cue-list-content {
+    padding: 0 20px 20px;
+    /*指派按钮的样式*/
+    .btn-assign {
+      display: inline-block;
+      font-size: 12px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      border: 1px solid #256eff;
+      color: #256eff;
+      box-sizing: border-box;
+      border-radius: 15px;
+      padding: 0 6px;
+      cursor: pointer;
+    }
+    .one-line {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .member-info {
+    /*  overflow: hidden;*/
+    padding-left: 8%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    .member-img {
+      overflow: hidden;
+      vertical-align: middle;
+      line-height: 55px;
+      width: 40px;
+      margin-right: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        border-radius: 100%;
+      }
+    }
+
+    .member-desc {
+      text-align: left;
+      .member-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100px;
+      }
+      .user-name,
+      .user-phone {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .telemark-nickname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
+
+/**
+* 表格展开内容
+**/
+.table-expand-container {
+  background: #f5f7fa;
+  padding: 20px 40px;
+  text-align: left;
+
+  .table-expand-title {
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  .table-expand-content {
+    background-color: #fff;
+  }
+  .table-expand-con-head,
+  .table-expand-con-item {
+    background-color: #edf0f7;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 12px;
+    span {
+      padding: 0 20px;
+      text-align: left;
+      &:nth-of-type(1) {
+        width: 100px;
+      }
+      &:nth-of-type(2) {
+        width: 180px;
+      }
+    }
+  }
+
+  .telemark-table-expand {
+    .table-expand-con-head,
+    .table-expand-con-item {
+      span {
+        min-width: 120px;
+      }
+    }
+  }
+
+  .last-expand {
+    .table-expand-con-head,
+    .table-expand-con-item {
+      span {
+        &:last-child {
+          margin-left: auto;
+        }
+      }
+      a {
+        margin-left: auto;
+      }
+    }
+    .table-expand-con-item {
+      background-color: #fff;
+      a {
+        color: #256eff;
+      }
+    }
+  }
+}
+.wkt-body .el-button,
+.wkb-market .el-button {
+  line-height: normal !important;
+}
+
+/deep/.el-table {
+  .cell {
+    padding: 9px 15px 9px;
+  }
+  a {
+    font-size: 14px;
+  }
+}
+
+.wxInfo-box {
+  .avatar {
+    height: 20px;
+    width: 20px;
+    border-radius: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .avatar-size {
+    font-size: 40px;
+    color: #e4e4e4;
+    transform: translateY(9px);
+    border-radius: 100%;
+  }
+}

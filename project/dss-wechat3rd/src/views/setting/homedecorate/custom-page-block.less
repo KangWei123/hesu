@@ -1,0 +1,100 @@
+.home-decorate-tips {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: @ui-font-color-black;
+  background: #f5f7fa;
+  padding: 16px;
+  
+  & > span {
+    padding: 2px 0px;
+  }
+  & > span:first-child{
+    padding-top: 0;
+  }
+}
+
+.home-decorate-container {
+  margin-top: 10px;
+}
+
+.custom-page-block {
+  width: 184px;
+  height: 280px;
+  // border: 1px solid @border-color;
+  border-radius: 4px;
+  position: relative;
+  float: left;
+  margin: 0 10px 10px 0;
+  background-size: cover!important;
+  .preview {
+    height: calc(280px - 34px);
+    position: relative;
+    .current-home {
+      position: absolute;
+      top: 20px;
+      color: white;
+      padding-left: 5px;
+      height: 24px;
+      line-height: 24px;
+      width: 65px;
+      background-color: rgb(78, 123, 229);
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  }
+  .add {
+    cursor: pointer;
+    .el-icon-plus {
+      // margin-top: 53px;
+      color: @ui-font-color-darkGrey;
+      font-size: 32px;
+    }
+  }
+  .name {
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    color: @ui-font-color-black;
+    background: #ffffff;
+    border-radius: 0px 0px 4px 4px;
+  }
+  .custom-name {
+    // background-color: transparent;
+    // border-top: none;
+  }
+  .mask {
+    position: absolute;
+    width: 184px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 30px;
+    display: none;
+    .oper-item {
+      cursor: pointer;
+      height: 22px;
+      width: 80px;
+      text-align: center;
+      margin: 10px auto 0;
+      border-radius: 4px;
+      border: 1px solid @border-color;
+      background-color: #fff;
+    }
+    .oper-item:hover {
+      border: 1px solid rgba(215, 224, 234, 0.8);
+      color: rgba(86, 105, 128, 0.8);
+    }
+  }
+}
+
+.custom-page-block:hover {
+  .mask {
+    display: block;
+  }
+}

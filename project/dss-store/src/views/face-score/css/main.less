@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'DIN-Medium';
+  src: url('../../../asserts/font/DIN-Medium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('@{VUE_APP_CDN_URL}/resources/dss-web-portal/fonts/PingFang-Regular.otf');
+  //src: url('../../../asserts/font/PingFang-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'PingFangSC-Regular';
+}
+
+.line-box {
+  position: absolute;
+  .line {
+    width: 50px;
+    height: 2px;
+    background: #4ee4ef;
+    box-shadow: 0px 0px 5px 1px #4de2ee;
+    margin-bottom: 20px;
+  }
+}
+
+.number {
+  font-family: 'DIN-Medium';
+}
+
+.vuelist-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.vuelist-enter-active,
+.vuelist-leave-active {
+  transition: all 1s;
+}
+.vuelist-enter, .vuelist-leave-to /* .list-leave-active 在低于 2.1.8 版本中 */ {
+  opacity: 0;
+  transform: translateY(-0.5rem);
+}

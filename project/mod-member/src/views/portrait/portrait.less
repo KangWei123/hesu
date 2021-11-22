@@ -1,0 +1,214 @@
+.portrait {
+  position: relative;
+}
+.portrait-bread {
+  background: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  padding: 10px 20px;
+  span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 9px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-size: 12px;
+    background: #f5f7fa;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #999;
+    border: 1px solid transparent;
+    list-style: none;
+  }
+  .active {
+    border: 1px solid #256eff;
+    color: #256eff;
+  }
+}
+
+.portrait-content {
+  margin: 30px 28px 25px 28px;
+  overflow: hidden;
+  color: #333;
+  // min-height: 700px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px #aaa;
+  background: linear-gradient(#fff, #f1f7f9);
+}
+
+.label-header {
+  margin-top: 10px;
+  padding-top: 10px;
+  height: 54px;
+  line-height: 40px;
+  padding-left: 40px;
+  background: #fff;
+  border-bottom: 2px solid #eee;
+  //*纯黑，透明度百分4*/
+  box-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 2px 5px rgba(224, 224, 224, 0.4), 0 0 0 #fff;
+
+  .label-title {
+    display: inline-block;
+    width: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    top: 3px;
+    left: 42px;
+
+    &::after {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.portrait-page-warpper {
+  border-radius: 4px;
+  height: calc(100vh - 260px);
+  background: #ffffff;
+  padding: 0;
+}
+
+/* 标签container tab */
+.el-tabs__nav-scroll {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* 标签内容区域 */
+.dmp-tags .tag-count-content {
+  border-top: 1px solid transparent !important;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 20px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  background: #f5f7fa !important;
+  box-sizing: border-box;
+}
+
+.tag-count-content {
+  height: 75px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  //background: #F5F7FA;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 标签项 */
+.dmp-tags .tag-content .tag-list .tag-item {
+  margin: 0 25px 20px 0;
+
+  span {
+    box-sizing: border-box;
+  }
+}
+
+/* 标签container*/
+.dmp-tags .tag-group-list {
+  padding-left: 10px !important;
+
+  .tag-group-item {
+    margin: 0 !important;
+    padding-bottom: 0;
+  }
+}
+
+.dmp-tags .tag-group-list .tag-group-name span {
+  color: #333333 !important;
+  margin-left: 10px !important;
+}
+
+.dmp-tags .list-border {
+  border-bottom: none;
+}
+.clear-btn {
+  position: relative;
+  right: 50px;
+}
+/*门店标签*/
+.tag-group-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000;
+  position: relative;
+  padding-left: 8px;
+
+  span {
+    color: #8a90a3;
+    font-weight: normal;
+    margin-left: 16px;
+  }
+}
+
+.tag-group-name::before {
+  content: '';
+  width: 2px;
+  height: 18px;
+  position: absolute;
+  background: #256eff;
+  left: 0;
+  top: 10px;
+}
+.modal-body {
+  padding: 10px 20px;
+  height: 210px;
+  min-width: 500px;
+  overflow-y: auto;
+}
+.modal-body::-webkit-scrollbar {
+  width: 10px;
+  height: 16px;
+  background: #f5f5f5;
+}
+.modal-body::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #dddddd;
+}
+/*tab*/
+.tab-pane {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 15px;
+  background: #ffffff;
+  .tab-item {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 40px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow: hidden;
+    text-align: center;
+    line-height: 40px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .active {
+    color: #256eff;
+    position: relative;
+  }
+  .active::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #256eff;
+    bottom: 0;
+    left: 0;
+  }
+}

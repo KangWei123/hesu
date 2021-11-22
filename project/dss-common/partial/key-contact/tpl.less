@@ -1,0 +1,224 @@
+@media screen and (min-width: 770.1px) {
+  .key-contact {
+    position: fixed;
+    width: 46px;
+    height: 166px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 23px;
+    right: 18px;
+    bottom: 40px;
+    z-index: 100000;
+
+    .pc-contact {
+      padding: 18px 0;
+      position: relative;
+      display: block;
+
+      .contact-icon-box {
+        /*需要往左便宜5px，补足空缺位置，否则hover容易丢失*/
+        padding-left: 13px;
+        margin-left: -5px;
+      }
+
+      .contact-icon {
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+
+        &.online {
+          background: url('../../img/contact/online-contact.png') no-repeat;
+          background-size: 100%;
+        }
+
+        &.demand {
+          background: url('../../img/contact/demand-commit.png') no-repeat;
+          background-size: 100%;
+        }
+
+        &.phone {
+          background: url('../../img/contact/phone-contact.png') no-repeat;
+          background-size: 100%;
+        }
+
+        &.qr-code {
+          background: url('../../img/contact/qr-code.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+
+      .action-container {
+        visibility: hidden;
+        position: absolute;
+        left: -165px;
+      }
+
+      .phone-box:hover .phone-detail {
+        visibility: visible;
+        width: 160px;
+        height: 136px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        text-align: start;
+        font-style: normal;
+
+        .phone-label {
+          height: 40px;
+          background: rgba(242, 249, 254, 1);
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(74, 144, 226, 1);
+          line-height: 40px;
+          font-family: PingFangSC-Regular;
+          padding-left: 15px;
+        }
+
+        .phone-item {
+          height: 40px;
+          line-height: 40px;
+          font-size: 12px;
+          font-family: PingFangSC-Regular;
+          font-weight: 400;
+          color: rgba(28, 28, 28, 1);
+          padding-left: 15px;
+        }
+
+      }
+
+      .demand-box:hover::after, .online-box:hover::after {
+        display: inline-block;
+        width: 104px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(74, 144, 226, 1);
+        position: absolute;
+        left: -109px;
+        font-style: normal;
+        cursor: pointer;
+      }
+
+      .demand-title:hover::after {
+        content: '提交需求';
+        top: 105px;
+      }
+
+      .online-title:hover::after {
+        content: '在线客服';
+        top: 60px;
+      }
+
+      .qr-code-box:hover .qr-code-img {
+        width: 140px;
+        height: 140px;
+        visibility: visible;
+        top: 15px;
+        left: -145px;
+      }
+
+      .contact-icon-box + .contact-icon-box {
+        margin-top: 14px;
+      }
+    }
+
+    .mobile-contact {
+      display: none;
+    }
+  }
+
+  .ZCChatFrame {
+    bottom: 10px !important;
+    right: 75px !important;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .key-contact {
+    position: fixed;
+    width: 100%;
+    height:50px;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.12);
+    z-index: 100000;
+    bottom: 0;
+    .pc-contact {
+      display: none;
+    }
+
+    .mobile-contact {
+      display: block;
+      height: 100%;
+      text-align: start;
+      line-height: 50px;
+      font-size: 0;
+      .contact-icon {
+        vertical-align: middle;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        &.online {
+          background: url('../../img/contact/mobile-online.png') no-repeat;
+          background-size: 100%;
+        }
+
+        &.phone {
+          background: url('../../img/contact/mobile-phone.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+      .del-icon {
+        vertical-align: middle;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background: url('../../img/contact/mobile-close.png') no-repeat;
+        background-size: 100%;
+      }
+      .mobile-label {
+        display: inline-block;
+        width: calc(50% - 25px);
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 15px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        background:rgba(53,123,234,1);
+        vertical-align: top;
+      }
+
+      .mobile-del-icon-box {
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        height: 50px;
+        background:rgba(37,102,205,1);
+        border-radius:1px;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+
+  .ZCChatFrame {
+    bottom: 60px !important;
+    right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ZCChatFrame {
+    bottom: 0px !important;
+    right: 0px !important;
+  }
+}
+

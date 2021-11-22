@@ -1,0 +1,146 @@
+.brand {
+  width: 660px;
+  margin: 38px auto 20px;
+  text-align: left;
+
+  .image-item {
+    text-align: center;
+  }
+
+  .el-form {
+    .is-success {
+      .el-input__inner {
+        border-color: #dcdfe6;
+      }
+    }
+
+    .el-form-item {
+      margin-bottom: 22px;
+
+      .el-form-item__label {
+        width: 108px;
+        text-align: right;
+        font-size: 12px;
+      }
+
+      .el-form-item__content {
+        margin-left: 108px;
+
+        .icon {
+          display: inline-block;
+          width: 74px;
+          height: 74px;
+          background: rgba(232, 239, 255, 1);
+        }
+
+        .add-image {
+          .dss-upload-title {
+            color: @blue-color;
+          }
+        }
+
+        .el-input {
+          width: 320px;
+
+          .el-input__inner {
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .el-form-item-image {
+      .el-form-item__content {
+        margin-left: 0px;
+        text-align: center;
+      }
+    }
+
+    .el-form-item-industryType {
+      margin-bottom: 12px;
+
+      .industryType-box {
+        .industry {
+          display: inline-block;
+          width: 70px;
+          height: 70px;
+          cursor: pointer;
+          vertical-align: top;
+          margin: 0px 10px 10px 0px;
+          font-size: 12px;
+          position: relative;
+
+          .name {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 3px;
+          }
+
+          .selected-logo-box {
+            border: 1px solid rgba(56, 121, 251, 1);
+            width: 68px;
+            height: 68px;
+            display: none;
+
+            .selected-logo {
+              position: absolute;
+              bottom: 5px;
+              right: 5px;
+              width: 10px;
+              padding: 2px;
+              border-radius: 14px;
+              background-color: rgba(56, 121, 251, 1);
+            }
+          }
+        }
+
+        .industry:last-child {
+          margin-right: 0px;
+        }
+
+        .selected-industryType {
+          .selected-logo-box {
+            display: inline-block;
+          }
+        }
+
+        // 禁止点击
+        .disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .el-form-item-industryType.is-error {
+      margin-bottom: 22px;
+    }
+
+    .el-form-item-agreement {
+      .el-form-item__content {
+        text-align: left;
+
+        .el-checkbox {
+          margin: 0px;
+          padding: 0px;
+        }
+
+        .el-checkbox__label,
+        .agreement-text {
+          color: #858c99;
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .btn-box {
+    text-align: left;
+    padding-left: 108px;
+  }
+}

@@ -1,0 +1,46 @@
+section li {
+  margin: 16px 77px;
+}
+.field {
+  display: flex;
+  align-items: center;
+  color: #333;
+  position: relative;
+  margin-bottom: 8px;
+}
+.field::before {
+  counter-increment: ruleCounter;
+  content: counter(ruleCounter);
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 12px;
+  background: #e4e7ed;
+  margin-right: 11px;
+}
+.field > * {
+  margin: 0 10px;
+}
+.field > span {
+  color: #3879fb;
+  cursor: pointer;
+}
+.filters {
+  display: flex;
+  position: relative;
+}
+var {
+  position: initial;
+}
+div ol {
+  margin-left: 55px;
+}
+.measure {
+  margin-top: 8px;
+  margin-left: 30px;
+  display: flex;
+}
+.measure > * {
+  margin-right: 10px;
+}

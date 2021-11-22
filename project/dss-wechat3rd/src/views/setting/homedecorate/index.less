@@ -1,0 +1,36 @@
+.homedecorate {
+  font-family: MicrosoftYaHei;
+  background-color: rgba(248, 249, 254, 1);
+  & > div:last-child {
+    min-height: calc(100vh -145px);
+    background-color: white;
+  }
+  .home-nav {
+    width: 118px;
+    padding-top: 38px;
+    height: calc(100vh - 122px);
+    float: left;
+    background-color: rgba(248, 249, 254, 1);
+    & > div {
+      width: 86px;
+      height: 26px;
+      text-align: center;
+      line-height: 26px;
+      border-radius: 4px;
+      font-size: 12px;
+
+      color: rgba(133, 140, 153, 1);
+      margin: 0 auto 12px;
+      cursor: pointer;
+    }
+
+    & > .active {
+      background: rgba(215, 224, 234, 1);
+    }
+
+  }
+
+  .aside-decorate {
+    padding-left: 118px;
+  }
+}

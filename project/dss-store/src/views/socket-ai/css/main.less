@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Acens';
+  src: url('../../../asserts/font/Acens.otf') format("truetype");
+}
+
+body {
+  font-family: Helvetica;
+}
+
+
+.number {
+  font-family: 'Acens';
+}
+
+.vuelist-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.vuelist-enter-active,
+.vuelist-leave-active {
+  transition: all 1s;
+}
+.vuelist-enter, .vuelist-leave-to /* .list-leave-active 在低于 2.1.8 版本中 */ {
+  opacity: 0;
+  transform: translateY(-0.5rem);
+}

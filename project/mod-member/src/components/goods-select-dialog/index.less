@@ -1,0 +1,59 @@
+.sku-select-dialog {
+  .list-filter {
+    margin-left: 32px;
+  }
+  .el-dialog__body {
+    padding: 0px 0px;
+  }
+  .el-dialog__header {
+    padding: 2px 20px 10px;
+  }
+
+  .el-table {
+    margin-top: 0px;
+    thead th {
+      background: rgba(233, 236, 241, 1);
+      color: rgba(32, 37, 44, 1);
+      padding: 6px 0;
+    }
+    td {
+      border-bottom: 1px solid rgba(186, 198, 211, 1);
+    }
+    td:first-child {
+      border-bottom: none;
+    }
+    td:last-child {
+      border-bottom: none;
+    }
+    .goods-product {
+      img {
+        width: 60px;
+        height: 40px;
+        background: rgba(240, 85, 108, 1);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 12px;
+      }
+
+      .card-type {
+        width: 60px;
+        height: 40px;
+        vertical-align: middle;
+        margin-right: 12px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .el-table::before {
+    content: '';
+    z-index: 0;
+  }
+}

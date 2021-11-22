@@ -1,0 +1,384 @@
+.mine-produce-container {
+  width: 100%;
+  min-height: calc(100vh - 145px);
+  min-width: 990px;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .components-area {
+    width: 210px;
+    max-height: 740px;
+    overflow-y: auto;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -20px;
+    padding: 0 20px 20px;
+    border-top: 1px solid rgba(230, 230, 230, 0.5);
+
+    .dss-btn-primary {
+      margin: 30px 50px;
+    }
+
+    .components-container {
+      border-right: 0;
+      border-bottom: 0;
+      line-height: 0;
+      margin-left: 1px;
+      margin-top: 16px;
+    }
+
+    .ca-title {
+      font-family: PingFangSC-Regular;
+      padding: 6px 0 4px 10px;
+      height: 20px;
+      font-weight: 400;
+      color: rgba(32, 37, 44, 1);
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .ca-title::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      background: #ff8341;
+      position: absolute;
+      top: 11px;
+      left: 14px;
+    }
+
+    .drag-class {
+      border: 1px solid rgb(78, 123, 229);
+      background-color: white;
+    }
+
+    .x {
+      margin: 0 !important;
+      width: 69px;
+      height: 69px;
+      border-left: 0;
+      border-top: 0;
+      position: relative;
+      display: inline-block !important;
+
+      .item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .item-cover {
+          position: absolute;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          top: 0;
+        }
+      }
+
+      .img {
+        width: 69px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        padding-top: 8px;
+      }
+
+      .name {
+        height: 17px;
+        line-height: 17px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #858c99;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .x:nth-child(-n + 3) {
+      // border-top: 1px solid rgba(233, 236, 241, 1);
+    }
+
+    .x:nth-child(3n + 1) {
+      // border-left: 1px solid rgba(233, 236, 241, 1);
+    }
+
+    .icon-mineNavigationModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-pageInfoModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-posterModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-liveModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-imageModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-titleModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-cardSwiperModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-giftCardModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-productModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-estateModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-preSaleModule {
+      width: 29px;
+      height: 24px;
+    }
+
+    .icon-serveModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-magicModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-textNavModule {
+      width: 32px;
+      height: 28px;
+    }
+
+    .icon-storeModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-assistBlankModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-assistLineModule {
+      width: 30px;
+      height: 26px;
+    }
+
+    .icon-collageModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-couponsModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-haggleModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-navigationModule {
+      width: 30px;
+      height: 28px;
+    }
+
+    .icon-activityModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-posterRecommendModule {
+      width: 38px;
+      height: 28px;
+    }
+
+    .icon-roomsModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-ticketsModule {
+      width: 30px;
+      height: 27px;
+    }
+
+    .icon-articleModule {
+      width: 30px;
+      height: 30px;
+    }
+
+    .icon-luckyModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-lucky {
+      width: 30px;
+      height: 30px;
+    }
+
+    .icon-seckillModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-scanModule {
+      width: 28px;
+      height: 28px;
+    }
+
+    .icon-integralModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-freeModule {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-mineOrderModule {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  .screen-area {
+    .header {
+      // margin-top: 24px;
+      cursor: pointer;
+    }
+
+    .screen {
+      width: 375px; //比父类多出15px
+      height: 605px;
+      position: relative;
+      overflow: hidden;
+      background: #f5f7fa;
+
+      .screen-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .screen-container {
+        width: 100%; //比父类多出15px
+        height: 590px;
+        position: absolute;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .screen-x {
+          position: relative;
+          // overflow: hidden;
+          // background: #f5f7fa;
+          // width: 345px;
+          // margin-left: 15px;
+          // margin-top: 10px;
+          // border-radius: 3px;
+
+          // border:1px dashed transparent;
+
+          & > .field {
+            box-sizing: border-box;
+          }
+
+          .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            display: none;
+            cursor: move;
+
+            .com-close {
+              cursor: pointer;
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+          }
+
+          & .select,
+          &:hover .cover {
+            display: block;
+          }
+        }
+      }
+
+      .drag {
+        background-color: lightgrey;
+        overflow: hidden;
+        cursor: move;
+      }
+    }
+  }
+
+  .editor-area-wrapper {
+    width: 367px;
+    height: 760px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(230, 230, 230, 0.5);
+    margin-top: -20px;
+  }
+
+  .editor-area::-webkit-scrollbar {
+    display: none;
+  }
+
+  .editor-area {
+    position: absolute;
+    left: 0;
+    width: 387px;
+    height: 760px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+    margin-left: 1px;
+    max-height: 760px;
+  }
+}
+
+.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+  overflow: unset;
+  cursor: move;
+}

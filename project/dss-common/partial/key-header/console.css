@@ -1,0 +1,11 @@
+.key-header_menu.console_menu .hidden_console, .key-menu.console_menu .hidden_console {
+  display: none;
+}
+
+.key-header_menu.console_menu {
+  width: 114px;
+}
+
+.key-header_menu.console_menu .key-header_menu_li {
+  width: 100%;
+}

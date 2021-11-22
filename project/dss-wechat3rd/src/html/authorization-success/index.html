@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>微信授权成功 - WakeData</title>
+    <meta
+      name="keywords"
+      content="珠海市卓轩科技有限公司,卓轩科技,WakeData,数据中台,大数据新零售,智慧门店,数字化门店,门店大屏,客流分析,客流画像,用户画像,门店投放,线下投放,会员分析,门店诊断,会员画像"
+    />
+    <meta
+      name="description"
+      content="WakeData致力于品牌进行线下数字化智慧门店赋能，基于线上线下数据深度打造客流洞察，客流画像，门店诊断，营销投放，会员分析等诸多功能，为品牌线下门店紧跟新零售时代潮流保驾护航。"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        background: #f0f2f7;
+        font-family: PingFangSC-Regular;
+      }
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: 20px auto 0px;
+        background-color: #ffffff;
+        border: solid 1px rgba(192, 192, 192, 0.3);
+        border-radius: 2px;
+        width: 629px;
+        height: 329px;
+      }
+      .title {
+        color: #44b549;
+        text-align: center;
+        margin-top: 150px;
+      }
+      .content {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+    <div class="container">
+      <div class="title">恭喜授权微信成功</div>
+      <div class="content">
+        <span id="time">4</span><span>后返回惟客宝</span>
+        <a href="javascript:window.opener=null;window.close();">立即返回</a>
+      </div>
+    </div>
+  </body>
+  <script>
+    function countDown() {
+      let time = document.getElementById('time');
+
+      time.innerHTML = time.innerHTML - 1;
+
+      if (time.innerHTML == 0) {
+        window.close();
+      }
+
+      setTimeout('countDown()', 1000);
+    }
+    countDown();
+  </script>
+  <%= require('ejs-loader!@/dss-common/partial/key-bury/tpl.tpl')() %>
+</html>

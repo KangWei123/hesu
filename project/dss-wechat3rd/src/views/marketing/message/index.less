@@ -1,0 +1,140 @@
+.template-msg {
+  font-family: MicrosoftYaHei;
+
+  .msg-container {
+    margin: 0 auto;
+    position: relative;
+    min-height: 254px;
+    width: 350px;
+    background: rgba(242, 246, 252, 1);
+    padding: 24px 24px 70px 24px;
+    font-family: MicrosoftYaHei;
+
+    .title {
+      font-size: 16px;
+      color: rgba(49, 52, 59, 1);
+      line-height: 21px;
+    }
+
+    .time {
+      font-size: 14px;
+      color: rgba(155, 159, 168, 1);
+      line-height: 19px;
+      margin-bottom: 10px;
+    }
+
+    .item-list {
+      margin-top: 6px;
+
+      .key {
+        font-size: 14px;
+        color: rgba(155, 159, 168, 1);
+        line-height: 19px;
+        width: 70px;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .value {
+        font-size: 14px;
+        color: rgba(49, 52, 59, 1);
+        line-height: 20px;
+        width: 240px;
+        display: inline-block;
+      }
+    }
+
+    .op-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 24px;
+      width: 350px;
+      height: 57px;
+      border-top: 1px solid rgba(228, 231, 237, 1);
+      font-size: 14px;
+      color: rgba(49, 52, 59, 1);
+      line-height: 57px;
+      vertical-align: center;
+      display: flex;
+      align-items: center;
+
+      span {
+        flex: 1;
+      }
+    }
+  }
+
+
+  .tp-msg-body {
+    min-height: calc(100vh - 164px);
+    background-color: #fff;
+    padding: 18px 20px;
+
+    .theme {
+      font-size: 16px;
+      color: @black-color;
+    }
+
+    .block {
+      margin-left: 14px;
+      margin-top: 40px;
+    }
+
+    .b-name {
+      height: 19px;
+      line-height: 19px;
+      font-size: 14px;
+      font-family: MicrosoftYaHei-Bold;
+      font-weight: bold;
+      color: @black-color;
+    }
+
+    .b-icon {
+      width: 2px;
+      height: 12px;
+      background: @blue-color;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .b-radio {
+      max-width: 161px;
+      display: inline-block;
+      margin-right: 90px;
+      padding-top: 13px;
+    }
+
+    .b-radio-group {
+      line-height: 1;
+      margin-top: 10px;
+    }
+
+    .b-radio-label {
+      font-size: 14px;
+      font-family: xMicrosoftYaHei;
+      color: @black-color;
+      line-height: 19px;
+    }
+
+    .b-ask {
+      width: 16px;
+      height: 16px;
+      background: transparent url(../../../images/marketing/message/question.png) no-repeat 0 0;
+      background-size: cover !important;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    .b-notice {
+      display: inline-block;
+      font-size: 14px;
+      font-family: xMicrosoftYaHei;
+      color: @light-black-color;
+      line-height: 19px;
+      text-align: center;
+    }
+  }
+}
+
+

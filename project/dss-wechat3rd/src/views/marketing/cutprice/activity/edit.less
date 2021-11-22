@@ -1,0 +1,156 @@
+.cut-price-edit {
+  margin-bottom: 30px;
+  .wkt-card {
+    padding: 20px;
+  }
+
+  .btn-delete {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: none;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 8px;
+    padding: 1px;
+    top: 5px;
+    background: #bac6d3;
+    &:active {
+      border-width: 0;
+    }
+    .el-icon-close {
+      color: #6c7e93;
+    }
+  }
+
+  .div-input {
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    background: #fff;
+    padding-left: 15px;
+    color: #606266;
+    font-size: 12px;
+    width: 150px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .btn-delete:hover {
+    color: #ff562d;
+  }
+
+  .store-list-box {
+    margin-bottom: 20px;
+    width: 800px;
+
+    .store-label {
+      height: 30px;
+      line-height: 30px;
+      background: rgba(245, 245, 245, 1);
+      padding-left: 23px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(51, 51, 51, 1);
+    }
+
+    .store-content {
+      max-height: 303px;
+      border: 1px solid rgba(235, 235, 235, 1);
+      padding: 14px 23px;
+      overflow: auto;
+
+      .store-item-box {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 50px;
+      }
+
+      .el-tag + .el-tag {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .activity-form {
+    .el-date-editor {
+      width: 100%;
+    }
+    .el-input, .el-input-number, .el-date-editor  {
+      max-width: 350px;
+    }
+    .middle-width {
+      width: 150px;
+    }
+
+    .div-input {
+      border-radius: 4px;
+      border: 1px solid #dcdfe6;
+      background: #fff;
+      padding-left: 15px;
+      color: #606266;
+      font-size: 12px;
+      width: 150px;
+      box-sizing: border-box;
+      display: inline-block;
+      height: 28px;
+      line-height: 28px;
+    }
+
+    .tip-msg {
+      color: @light-black-color;
+      font-size: @small-font;
+    }
+    /*商品选择样式*/
+    .form-goods {
+      width: 300px;
+      background: @bg-color;
+      height: 28px;
+      line-height: 28px;
+      font-size: 12px;
+      border-radius: 2px;
+      padding: 0 9px;
+      box-sizing: border-box;
+      color: #31343B;
+      padding-right: 22px;
+      position: relative;
+      cursor: pointer;
+      div {
+        display: inline-block;
+        float: left;
+        margin-right: 25px;
+      }
+      .goods-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 130px;
+      }
+      .goods-price {
+        color: #ff562d;
+      }
+
+
+    }
+  }
+
+  .footer {
+    margin: 30px 0 0 150px;
+  }
+
+  .el-tag--danger {
+    border-color: red;
+    
+    .el-tag__close {
+      color: red;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

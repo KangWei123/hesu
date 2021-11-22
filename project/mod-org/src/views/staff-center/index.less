@@ -1,0 +1,96 @@
+.staff-mgr {
+  position: relative;
+
+  .wkt-opt-label-container {
+    padding: 30px 170px 10px 20px;
+  }
+
+  .staff-mgr-content {
+    padding: 20px;
+
+    .btn-operation {
+      display: inline-block;
+    }
+  }
+
+  .el-table::before {
+    content: none;
+  }
+
+  .condition {
+    .query-add-btn {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+    }
+
+    .patch-add {
+      position: absolute;
+      top: 30px;
+      right: 210px;
+    }
+
+    .query-del-list {
+      width: 56px;
+      height: 30px;
+      line-height: 30px;
+      position: absolute;
+      right: 120px;
+      top: 30px;
+    }
+  }
+
+  .del-employee-table-content {
+    padding: 20px;
+  }
+
+  .tree-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.cell {
+  transform: translateY(15%);
+
+  .el-select {
+    /deep/ .el-input__inner {
+      width: 120px;
+    }
+  }
+}
+
+.table_content {
+  display: flex;
+  margin-bottom: 20px;
+  width: 150%;
+
+  .flag {
+    color: red;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .content {
+    color: #333;
+    cursor: default;
+    width: 100px;
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 1px;
+  }
+}
+
+.sign {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  width: 15px;
+  font-size: 12px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+}

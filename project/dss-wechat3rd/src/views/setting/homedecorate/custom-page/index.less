@@ -1,0 +1,144 @@
+
+.custom-page {
+  .bg-mixin;
+  padding: 12px 20px 20px;
+  margin-top: 16px;
+  border-radius: 4px;
+
+  .home-decorate-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -16px;
+    padding: 0px 70px;
+    // min-height: calc(100vh - 400px);
+    .custom-page-block .mask {
+      box-sizing: border-box;
+    }
+
+    .custom-page-block {
+      border-radius: 4px;
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2); 
+      margin: 0 16px 10px 0;
+    }
+
+    .mask {
+      height: 246px;
+      .oper-item {
+        border: none;
+        color: #1890FF;
+        background: transparent;
+      }
+    }
+
+    &> i {
+      width: 184px;
+      margin-right: 16px;
+    }
+  }
+
+  .home-decorate-tips {
+    font-size: 14px;
+    font-family: PingFangSC, PingFangSC-Regular;
+    font-weight: 400;
+    color: #303133;
+    line-height: 22px;
+    padding: 16px;
+    background: #f5f7fa;
+
+    & > span {
+      padding: 2px 0px;
+    }
+  }
+
+  .library-tab {
+    padding: 10px 0;
+
+    .library-tab-item.el-button {
+      border: 1px solid #DCDFE6;
+      color: #606266;
+
+      &.active {
+        border: 1px solid #256EFF;
+        color: #256EFF;
+      }
+    }
+  }
+
+  .custom-page-wrapper {
+    // float: left;
+
+    .custom-page-edit-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f7fa;
+    }
+
+    .edit-name {
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      color: @black-color;
+      background: none;
+      border: none;
+      padding: 0 20px;
+      // width: 160px;
+      background: #fff;
+
+      .edit-name-box {
+        display: flex;
+        width: 160px;
+        margin: 0 auto;
+
+        .edit-name-input {
+          flex: 1;
+          .el-input__inner {
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+
+        .btn {
+          width: 30px;
+          color: rgb(46, 141, 255);
+          margin-left: 4px;
+          text-align: center;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+
+      .edit-icon {
+        color: rgb(46, 141, 255);
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .name-text-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .name-text {
+          // flex: 1;
+          height: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .search {
+    width: 300px;
+    display: flex;
+    padding: 10px 0;
+    margin-top: 16px;
+  }
+}
+.name{
+  overflow: hidden;
+}

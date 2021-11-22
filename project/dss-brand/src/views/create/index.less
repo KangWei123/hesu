@@ -1,0 +1,66 @@
+.create-index {
+  min-width: 880px;
+  padding: 60px;
+  text-align: center;
+  font-size: 12px;
+
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul,
+  li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  /*按钮*/
+  .el-button {
+    padding: 0px 36px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 15px;
+    font-size: 12px;
+    background-color: rgba(56, 121, 251, 1);
+  }
+
+  .el-button:hover {
+    background-color: rgba(67, 121, 237, .8);
+    border: 1px solid rgba(67, 121, 237, .8);
+  }
+
+  /*顶部步骤条*/
+  .el-steps {
+    display: flex;
+    width: 750px;
+    margin: 0px auto;
+    font-size: 14px;
+
+    .el-step__icon {
+      background: rgba(212, 212, 212, 1);
+      color: #fff;
+    }
+
+    .el-step__head.is-finish {
+      border-color: @blue-color;
+      color: @blue-color;
+
+
+      .el-step__icon.is-text {
+        background: @blue-color;
+      }
+    }
+
+    .el-step__head.is-wait {
+      border-color: rgba(212, 212, 212, 1);
+    }
+
+    .el-step__main {
+      .is-finish {
+        color: @blue-color;
+      }
+    }
+  }
+}

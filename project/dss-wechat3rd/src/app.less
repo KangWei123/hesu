@@ -1,0 +1,637 @@
+@import '~@/dss-common/style/wkt-constants.less';
+
+.wkb-root {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.wkb-app {
+  flex: 1;
+  display: flex;
+  position: relative;
+  padding-top: @header-height;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wkb-aside {
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  background: #fff;
+  box-shadow: 1px 0 0 0 #ecf1f7;
+  z-index: 10;
+
+  .sidebar {
+    display: flex;
+    height: calc(100% - 60px);
+  }
+
+  &.adapter-ifr-menu {
+    .sidebar {
+      height: calc(100% - 20px);
+    }
+  }
+
+  .sidebar-container {
+    width: @sidebar-width;
+    transition: width 0.28s;
+    height: 100%;
+  }
+
+  .sidebar-sub-container {
+    width: @sidebar-sub-width;
+    transition: width 0.28s;
+    height: 100%;
+  }
+
+  .horizontal-collapse-transition {
+    transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+  }
+
+  .scrollbar-wrapper {
+    overflow-x: hidden !important;
+  }
+
+  .el-menu {
+    border: none;
+    height: 100%;
+    width: 100% !important;
+  }
+
+  .is-horizontal {
+    display: none;
+  }
+
+  .el-scrollbar {
+    height: calc(100% - 50px);
+  }
+
+  .aside-store {
+    position: relative;
+    width: 120px;
+    height: 20px;
+    line-height: 24px;
+    margin: 9px 10px 11px;
+    background: rgba(255, 255, 255, 1);
+    color: @light-black-color;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0 12px 0 8px;
+    box-sizing: border-box;
+
+    .el-icon--right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 12px;
+      line-height: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .aside-store:hover {
+    color: @light-black-color-hover;
+  }
+
+  .aside-body {
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    height: calc(100% - 175px);
+  }
+
+  .aside-cashier {
+    position: fixed;
+    bottom: 10px;
+    left: 16px;
+    width: 140px;
+    height: 30px;
+    background-image: url('./images/app/aside-cashier.png');
+    background-repeat: no-repeat;
+    background-size: 28px 23px;
+    -moz-background-size: 28px 23px;
+    font-size: 14px;
+    font-family: PingFangSC, PingFangSC-Regular;
+    font-weight: 400;
+    color: #717378;
+    line-height: 22px;
+
+    span {
+      padding-left: 46px;
+    }
+  }
+
+  // 门店下拉搜索框样式
+
+  .aside-store-select {
+    margin: 5px 0;
+
+    .el-input__inner {
+      color: #999;
+      height: 30px;
+      line-height: 30px;
+      border: none !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+    }
+
+    .el-input__inner:focus {
+      border: none !important;
+    }
+
+    .el-input__icon {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+
+  .menus {
+    width: 140px;
+    margin: 0 auto;
+
+    .disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  li {
+    position: relative;
+  }
+
+  // li a {
+  //   width: 140px;
+  //   height: 40px;
+  //   line-height: 40px;
+  //   display: inline-block;
+  //   font-size: 14px;
+  //   font-family: PingFangSC-Regular;
+  //   font-weight: 400;
+  //   color: @light-black-color;
+  //   cursor: pointer;
+  // }
+
+  li span {
+    vertical-align: middle;
+  }
+
+  li .dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 40px;
+    margin-left: 0;
+    background: @blue-color;
+    border-radius: 0;
+    display: none;
+  }
+
+  li.selected,
+  li:hover {
+    .icon-console {
+      background-image: url(./images/logos/console-selected.png);
+    }
+
+    .icon-goods-manage {
+      background-image: url(images/logos/goods-manage-selected.png);
+    }
+
+    .icon-hotel {
+      background-image: url(images/logos/hotel-selected.png);
+    }
+
+    .icon-ticket {
+      background-image: url(images/logos/ticket-selected.png);
+    }
+
+    .icon-shelves {
+      background-image: url(./images/logos/goods-shelves-selected.png);
+    }
+
+    .icon-booking {
+      background-image: url(./images/logos/booking-selected1.png);
+    }
+
+    .icon-order {
+      background-image: url(./images/logos/order-selected.png);
+    }
+
+    .icon-vip {
+      background-image: url(./images/logos/wkb-vip-selected.png);
+    }
+
+    .icon-wkb-setting {
+      background-image: url(./images/logos/wkb-setting-selected.png);
+    }
+
+    .icon-store-manage {
+      background-image: url(./images/logos/store-manage-selected.png);
+    }
+
+    .icon-markting {
+      background-image: url(./images/logos/markting-selected.png);
+    }
+
+    .icon-wx-setting {
+      background-image: url(./images/logos/wx-setting-selected.png);
+    }
+
+    .icon-metadata-management {
+      background-image: url(./images/logos/metadata-selected.png);
+    }
+
+    .icon-mp-decorate {
+      background-image: url(./images/logos/mp-decorate-selected.png);
+    }
+
+    .icon-warehouse {
+      background-image: url(./images/logos/warehouse-selected.png);
+    }
+
+    .icon-order-goods {
+      background-image: url(./images/logos/order-goods-selected.png);
+    }
+
+    // 工程报价
+
+    .icon-quote {
+      background-image: url(./images/logos/icon-quote-selected.png);
+    }
+  }
+
+  li.selected .dot {
+    display: block;
+  }
+
+  li.selected a {
+    background: #edf4ff;
+    color: @blue-color;
+  }
+
+  li i {
+    margin-left: 18px;
+  }
+
+  li:hover {
+    a {
+      background: #cfdcf2;
+      color: @blue-color-hover;
+    }
+  }
+
+  .icon-console {
+    background-image: url(./images/logos/console.png);
+  }
+
+  .icon-goods-manage {
+    background-image: url(images/logos/goods-manage.png);
+  }
+
+  .icon-hotel {
+    background-image: url(images/logos/hotel.png);
+  }
+
+  .icon-ticket {
+    background-image: url(images/logos/ticket.png);
+  }
+
+  .icon-shelves {
+    background-image: url(./images/logos/goods-shelves.png);
+  }
+
+  .icon-booking {
+    background-image: url(./images/logos/booking1.png);
+  }
+
+  .icon-order {
+    background-image: url(./images/logos/order.png);
+  }
+
+  .icon-vip {
+    background-image: url(./images/logos/wkb-vip.png);
+  }
+
+  .icon-wkb-setting {
+    background-image: url(./images/logos/wkb-setting.png);
+  }
+
+  .icon-store-manage {
+    background-image: url(./images/logos/store-manage.png);
+  }
+
+  .icon-markting {
+    background-image: url(./images/logos/markting.png);
+  }
+
+  .icon-wx-setting {
+    background-image: url(./images/logos/wx-setting.png);
+  }
+
+  .icon-metadata-management {
+    background-image: url(./images/logos/metadata.png);
+  }
+
+  .icon-mp-decorate {
+    background-image: url(./images/logos/mp-decorate.png);
+  }
+
+  .icon-warehouse {
+    background-image: url(./images/logos/warehouse.png);
+  }
+
+  .icon-order-goods {
+    background-image: url(./images/logos/order-goods.png);
+  }
+
+  // 工程报价
+
+  .icon-quote {
+    background-image: url(./images/logos/icon-quote.png);
+  }
+
+  // .el-menu-vertical:not(.el-menu--collapse) {
+  //   width: @sidebar-width;
+  //   min-height: 400px;
+  // }
+}
+
+// 门店下拉选择框
+
+.aside-store-select-dropdown {
+  max-height: 75vh;
+  max-width: 250px;
+  overflow-y: auto;
+  margin-top: 0 !important;
+  border-radius: 0 !important;
+
+  .el-select-dropdown__wrap {
+    max-height: none;
+  }
+}
+
+.wkb-body {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+
+  .el-loading-spinner {
+    font-size: 20px;
+  }
+
+  .el-input__inner,
+  .el-textarea__inner {
+    padding: 5px 10px;
+  }
+
+  //输入框遮挡图标
+
+  .el-input--prefix {
+    .el-input__inner {
+      padding-left: 38px;
+    }
+  }
+}
+
+.entry-body {
+  //max-width: 1200px;
+  background: #fff;
+  margin: 0 auto;
+  min-height: calc(100vh);
+
+  .el-loading-spinner {
+    font-size: 20px;
+  }
+}
+
+.loading-bg {
+  position: absolute;
+  background-color: #f2f4f7;
+  min-height: calc(100vh - @header-height);
+  z-index: 99;
+  box-sizing: border-box;
+
+  .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - @header-height - 20px);
+    background-color: #fff;
+    margin: 10px;
+  }
+
+  .loading-gif {
+    width: 160px;
+    height: 100%;
+  }
+}
+
+.loading-size {
+  width: calc(100% - 140px - 20px);
+  margin: @header-height auto 0;
+  margin-left: 140px;
+}
+
+.adapter-loading-size {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  margin-left: 0;
+  overflow-x: hidden;
+}
+
+// 门店下拉框
+
+.aside-storeList {
+  max-height: 75vh;
+  max-width: 250px;
+  overflow-y: auto;
+
+  .selected-item {
+    color: @blue-color !important;
+  }
+}
+
+body {
+  .wkb-aside,
+  .wkb-body {
+    display: none;
+  }
+
+  .el-pagination .el-input--mini .el-input__inner {
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+  }
+
+  // 搜索框图标
+
+  .el-input--mini .el-input__icon {
+    line-height: 38px;
+  }
+
+  /* 面包屑容器，当页面有面包屑时，需要添加该class */
+
+  .wkt-breadcrumb-container {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid @border-color;
+  }
+
+  // 按钮定位
+
+  .Add-Manage-Button {
+    position: absolute;
+    top: 11px;
+    right: 24px;
+    // position: fixed;
+    // top: 87px;
+    // right: 42px;
+  }
+
+  .table-del-a {
+    color: @ui-function-color-fail !important;
+  }
+
+  // 表格操作按钮
+
+  .cell {
+    // a:not(:last-child), span > a:last-child {
+    //   color: #2E8DFF;
+    // }
+
+    a,
+    span > a {
+      color: #2e8dff;
+    }
+
+    a:not(:last-child) {
+      padding-right: 12px !important;
+    }
+
+    // a:last-child {
+    //   color: #F5222D;
+    // }
+  }
+
+  .wkb-market .table-href {
+    color: #2e8dff;
+  }
+
+  // .el-table__fixed-right,.el-table__fixed {
+  //   top: 20px;
+  // }
+
+  // 分页选择图标
+
+  .el-select .el-input .el-select__caret {
+    line-height: 30px;
+  }
+
+  // 抽屉展示详情页，滚动条
+
+  .el-drawer.rtl {
+    overflow: scroll;
+
+    .el-drawer__header {
+      font-size: 16px;
+      height: 26px;
+      line-height: 26px;
+      font-weight: 500;
+      color: @ui-font-color-black;
+      margin-bottom: 0;
+    }
+  }
+}
+
+body.create-store-env {
+  font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', Tahoma, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  .wkb-body {
+    display: block;
+    padding-top: 20px;
+    max-width: 1200px;
+    min-height: calc(100vh - 60px - 24px); //减去padding的20px和header的60px
+  }
+}
+
+body.empty-store-env {
+  font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', Tahoma, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  #app {
+    padding-top: 0;
+  }
+
+  .wkb-body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+body.manage-store-env {
+  font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', Tahoma, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  .wkb-aside,
+  .wkb-body {
+    display: block;
+  }
+
+  .wkb-body {
+    transition: margin-left 0.28s;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .hideSidebar {
+    .sidebar-container {
+      width: @hide-sidebar-width !important;
+    }
+  }
+}
+
+.limit-line-ellipsis {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-content: center;
+  word-break: break-all;
+
+  &.line-2 {
+    -webkit-line-clamp: 2;
+  }
+
+  &.line-3 {
+    -webkit-line-clamp: 3;
+  }
+
+  &.line-4 {
+    -webkit-line-clamp: 4;
+  }
+
+  &.line-5 {
+    -webkit-line-clamp: 5;
+  }
+}
+
+//去除表格固定右侧底部边框
+
+.el-table__fixed::before,
+.el-table__fixed-right::before {
+  height: 0;
+}
